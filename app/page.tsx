@@ -247,7 +247,7 @@ export default function Home() {
       tagline: "Explore like a local, anywhere in the world.",
       description:
         "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals. WanderMap helps travelers discover authentic experiences beyond typical tourist attractions.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=WanderMap+App",
+      imageUrl: "images/projects/wandermap/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -256,7 +256,7 @@ export default function Home() {
       tagline: "Meal planning simplified for busy professionals.",
       description:
         "An all-in-one meal planning app that generates personalized weekly meal plans based on dietary preferences, creates shopping lists, and provides step-by-step cooking instructions with time-saving batch preparation techniques.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=MealPrep+Pro+App",
+      imageUrl: "/images/projects/mealprep/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -265,7 +265,7 @@ export default function Home() {
       tagline: "Master your productivity, one focused session at a time.",
       description:
         "A productivity app combining the Pomodoro technique with flow state science, helping users achieve deep work through customized focus sessions, ambient soundscapes, and distraction blocking.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=FocusFlow+App",
+      imageUrl: "/images/projects/focusflow/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -274,7 +274,7 @@ export default function Home() {
       tagline: "Healthcare in your pocket, anytime, anywhere.",
       description:
         "A telemedicine platform connecting patients with healthcare providers for virtual consultations, prescription management, and health monitoring through an intuitive mobile interface.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=PocketClinic+App",
+      imageUrl: "/images/projects/pocketclinic/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -283,7 +283,7 @@ export default function Home() {
       tagline: "Your personal plant care assistant.",
       description:
         "A plant care companion app that identifies plants through image recognition, provides care schedules, troubleshoots common issues, and connects users with a community of plant enthusiasts.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=GreenThumb+App",
+      imageUrl: "/images/projects/greenthumb/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -292,7 +292,7 @@ export default function Home() {
       tagline: "Making financial freedom achievable.",
       description:
         "A personal finance app that automatically categorizes expenses, provides visual spending insights, and offers personalized recommendations to help users reach their financial goals.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=BudgetBuddy+App",
+      imageUrl: "/images/projects/budgetbuddy/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -301,7 +301,7 @@ export default function Home() {
       tagline: "Personalized fitness, perfectly synchronized.",
       description:
         "A fitness tracking app that adapts workouts based on user progress, available equipment, and recovery needs, while synchronizing with wearable devices for comprehensive health monitoring.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=FitSync+App",
+      imageUrl: "/images/projects/fitsync/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -310,7 +310,7 @@ export default function Home() {
       tagline: "The universe in your hands.",
       description:
         "An augmented reality astronomy app that identifies celestial objects when pointing your phone at the sky, provides information about stars, planets, and constellations, and notifies users of upcoming astronomical events.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=NightSky+App",
+      imageUrl: "/images/projects/nightsky/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -319,7 +319,7 @@ export default function Home() {
       tagline: "Language learning that fits your life.",
       description:
         "An adaptive language learning app that uses AI to create personalized lesson plans, incorporates speech recognition for pronunciation feedback, and integrates learning opportunities into daily activities.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=LinguaLeap+App",
+      imageUrl: "/images/projects/lingualeap/main.jpg",
       category: "Mobile Applications" as const,
     },
 
@@ -428,7 +428,7 @@ export default function Home() {
               </div>
 
               {/* Static text container */}
-              <div className="static">
+              <div className="static md:w-[800px]">
                 <div className="text-3xl md:text-5xl font-light text-gray-300 mb-6">
                   An Experience Product Designer — Based in South Africa
                 </div>
@@ -448,7 +448,7 @@ export default function Home() {
                   href="https://facebook.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white"
+                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"
                 >
                   Dribbble
                 </a>
@@ -456,7 +456,7 @@ export default function Home() {
                   href="https://instagram.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white"
+                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"
                 >
                   Instagram
                 </a>
@@ -464,7 +464,7 @@ export default function Home() {
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white"
+                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"
                 >
                   LinkedIn
                 </a>
@@ -476,7 +476,7 @@ export default function Home() {
 
       {/* Filter section that appears on scroll */}
       <div
-        className={`sticky top-0 z-20 bg-[#050510]/90 backdrop-blur-sm transition-all duration-500 ${
+        className={`sticky h-20 top-0 z-20 bg-[#050510]/40 backdrop-blur-2xl transition-all duration-500 ${
           showFilter ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -492,27 +492,35 @@ export default function Home() {
             <Link
               href={`/portfolio/${project.id}`}
               key={project.id}
-              className="group block relative overflow-hidden rounded-xl h-96 w-full"
+              className="group block relative overflow-hidden rounded-[48px] h-[600px] w-full"
             >
               {/* Image */}
               <Image
                 src={project.imageUrl || "/placeholder.svg"}
                 alt={project.name}
                 width={800}
-                height={900}
-                className="w-full h-[900px] object-cover transition-transform duration-500 hover:scale-110"
+                height={600}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                // The object-cover property ensures images with different aspect ratios still look good
+                // For best performance, use actual image dimensions that match your design
               />
 
               {/* Overlay content - visible on hover */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
                 <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-xs text-gray-400 uppercase tracking-wider mb-3 inline-block">
+                  <span className="text-xs text-white uppercase tracking-wider mb-3 inline-block hover-glitch">
                     {project.category}
                   </span>
-                  <div className="text-2xl font-medium mb-3 text-white">{project.name}</div>
-                  <p className="text-gray-300 mb-4 line-clamp-3">{project.tagline}</p>
-                  <p className="text-gray-400 text-sm mb-4 line-clamp-2">{project.description}</p>
-                  <span className="inline-flex items-center text-white border-b border-white pb-1 group-hover:pl-2 transition-all duration-300">
+                  <div className="text-2xl font-medium mb-3 text-white hover-glitch">
+                    {project.name}
+                  </div>
+                  <p className="text-white mb-4 line-clamp-3 hover-glitch">
+                    {project.tagline}
+                  </p>
+                  <p className="text-white text-sm mb-4 line-clamp-2 hover-glitch">
+                    {project.description}
+                  </p>
+                  <span className="inline-flex items-center text-white border-b border-white pb-1 group-hover:pl-2 transition-all duration-300 hover-glitch">
                     View Project <span className="ml-2 group-hover:ml-3 transition-all duration-300">→</span>
                   </span>
                 </div>

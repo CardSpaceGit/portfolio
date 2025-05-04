@@ -332,7 +332,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
       <div className="container mx-auto px-4 py-8">
         <button
           onClick={() => router.back()}
-          className="inline-flex items-center mb-8 hover:opacity-70 transition-opacity text-black"
+          className="inline-flex items-center mb-8 hover:opacity-70 transition-opacity text-black hover-glitch"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back
@@ -455,7 +455,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <ChevronLeft className="h-5 w-5 transform group-hover:-translate-x-1 transition-transform" />
               <div className="text-left">
                 <div className="text-sm text-gray-500">Previous</div>
-                <div className="font-medium">{adjacentProjects.prev.name}</div>
+                <div className="font-medium hover-glitch">{adjacentProjects.prev.name}</div>
               </div>
             </button>
 
@@ -482,7 +482,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             >
               <div className="text-right">
                 <div className="text-sm text-gray-500">Next</div>
-                <div className="font-medium">{adjacentProjects.next.name}</div>
+                <div className="font-medium hover-glitch">{adjacentProjects.next.name}</div>
               </div>
               <ChevronRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
             </button>
