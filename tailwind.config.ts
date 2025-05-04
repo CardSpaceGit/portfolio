@@ -89,6 +89,8 @@ const config: Config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        "4xl": "2rem", // 32px rounded corners
+        "6xl": "3rem", // 48px rounded corners
       },
       keyframes: {
         "accordion-down": {

@@ -233,6 +233,12 @@ function GlitchingTitle() {
 
 type FilterCategory = "Mobile Applications" | "Desktop Applications" | "Branding"
 
+// Helper function to ensure all image paths have leading slashes
+const normalizeImagePath = (path: string): string => {
+  if (!path) return "/placeholder.svg";
+  return path.startsWith("/") ? path : `/${path}`;
+};
+
 export default function Home() {
   const [activeFilter, setActiveFilter] = useState<FilterCategory>("Mobile Applications")
   const [showFilter, setShowFilter] = useState(false)
@@ -247,7 +253,7 @@ export default function Home() {
       tagline: "Explore like a local, anywhere in the world.",
       description:
         "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals. WanderMap helps travelers discover authentic experiences beyond typical tourist attractions.",
-      imageUrl: "images/projects/wandermap/main.jpg",
+      imageUrl: "/projects/wandermap/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -255,8 +261,8 @@ export default function Home() {
       name: "MealPrep Pro",
       tagline: "Meal planning simplified for busy professionals.",
       description:
-        "An all-in-one meal planning app that generates personalized weekly meal plans based on dietary preferences, creates shopping lists, and provides step-by-step cooking instructions with time-saving batch preparation techniques.",
-      imageUrl: "/images/projects/mealprep/main.jpg",
+        "An all-in-one meal planning app that generates personalized weekly meal plans based on dietary preferences, nutritional goals, and cooking skill levels. It includes automated grocery lists and meal preparation techniques.",
+      imageUrl: "/projects/mealprep-pro/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -264,8 +270,8 @@ export default function Home() {
       name: "FocusFlow",
       tagline: "Master your productivity, one focused session at a time.",
       description:
-        "A productivity app combining the Pomodoro technique with flow state science, helping users achieve deep work through customized focus sessions, ambient soundscapes, and distraction blocking.",
-      imageUrl: "/images/projects/focusflow/main.jpg",
+        "A productivity app combining the Pomodoro technique with flow state science, helping users achieve deep work through customized work intervals, ambient soundscapes, and distraction blocking.",
+      imageUrl: "/projects/focusflow/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -273,8 +279,8 @@ export default function Home() {
       name: "PocketClinic",
       tagline: "Healthcare in your pocket, anytime, anywhere.",
       description:
-        "A telemedicine platform connecting patients with healthcare providers for virtual consultations, prescription management, and health monitoring through an intuitive mobile interface.",
-      imageUrl: "/images/projects/pocketclinic/main.jpg",
+        "A telemedicine platform connecting patients with healthcare providers for virtual consultations. Features include secure video calls, medical history tracking, and an intuitive mobile interface.",
+      imageUrl: "/projects/pocketclinic/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -282,8 +288,8 @@ export default function Home() {
       name: "GreenThumb",
       tagline: "Your personal plant care assistant.",
       description:
-        "A plant care companion app that identifies plants through image recognition, provides care schedules, troubleshoots common issues, and connects users with a community of plant enthusiasts.",
-      imageUrl: "/images/projects/greenthumb/main.jpg",
+        "A plant care companion app that identifies plants through image recognition and provides care schedules, growth tracking, and connects users with a community of plant enthusiasts.",
+      imageUrl: "/projects/greenthumb/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -291,8 +297,8 @@ export default function Home() {
       name: "BudgetBuddy",
       tagline: "Making financial freedom achievable.",
       description:
-        "A personal finance app that automatically categorizes expenses, provides visual spending insights, and offers personalized recommendations to help users reach their financial goals.",
-      imageUrl: "/images/projects/budgetbuddy/main.jpg",
+        "A personal finance app that automatically categorizes expenses and provides visual spending insights. It includes budget planning tools and smart recommendations to help users reach their financial goals.",
+      imageUrl: "/projects/budgetbuddy/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -300,8 +306,8 @@ export default function Home() {
       name: "FitSync",
       tagline: "Personalized fitness, perfectly synchronized.",
       description:
-        "A fitness tracking app that adapts workouts based on user progress, available equipment, and recovery needs, while synchronizing with wearable devices for comprehensive health monitoring.",
-      imageUrl: "/images/projects/fitsync/main.jpg",
+        "A fitness tracking app that adapts workouts based on user progress and available equipment. It includes diet tracking, custom exercise demonstrations, and comprehensive health monitoring.",
+      imageUrl: "/projects/fitsync/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -309,8 +315,8 @@ export default function Home() {
       name: "NightSky",
       tagline: "The universe in your hands.",
       description:
-        "An augmented reality astronomy app that identifies celestial objects when pointing your phone at the sky, provides information about stars, planets, and constellations, and notifies users of upcoming astronomical events.",
-      imageUrl: "/images/projects/nightsky/main.jpg",
+        "An augmented reality astronomy app that identifies celestial objects when pointing your phone at the sky. It includes detailed information on stars, planets, and upcoming astronomical events.",
+      imageUrl: "/projects/nightsky/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -318,8 +324,8 @@ export default function Home() {
       name: "LinguaLeap",
       tagline: "Language learning that fits your life.",
       description:
-        "An adaptive language learning app that uses AI to create personalized lesson plans, incorporates speech recognition for pronunciation feedback, and integrates learning opportunities into daily activities.",
-      imageUrl: "/images/projects/lingualeap/main.jpg",
+        "An adaptive language learning app that uses AI to create personalized lesson plans. It features speech recognition for pronunciation feedback and gamified elements to integrate learning into daily activities.",
+      imageUrl: "/projects/lingualeap/main.jpg",
       category: "Mobile Applications" as const,
     },
 
@@ -488,7 +494,7 @@ export default function Home() {
       {/* Projects section - 2 COLUMN GRID LAYOUT */}
       <div ref={projectsRef} className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
-          {filteredProjects.map((project) => (
+          {filteredProjects.map((project, index) => (
             <Link
               href={`/portfolio/${project.id}`}
               key={project.id}
@@ -496,13 +502,16 @@ export default function Home() {
             >
               {/* Image */}
               <Image
-                src={project.imageUrl || "/placeholder.svg"}
+                src={normalizeImagePath(project.imageUrl)}
                 alt={project.name}
                 width={800}
                 height={600}
-                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                // The object-cover property ensures images with different aspect ratios still look good
-                // For best performance, use actual image dimensions that match your design
+                priority={index < 6} // Prioritize loading the first 6 images
+                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  const target = e.target as HTMLImageElement;
+                  target.src = `/placeholder.svg?height=600&width=800&text=${project.name.replace(/\s+/g, "+")}`;
+                }}
               />
 
               {/* Overlay content - visible on hover */}
@@ -531,9 +540,9 @@ export default function Home() {
       </div>
 
       {/* Full-width white background section with mission statement */}
-      <div className="w-full bg-white text-black py-24 mt-24">
+      <div className="w-full bg-white text-black py-24 my-24">
         <div className="container mx-auto px-4">
-          <div className="text-4xl md:text-6xl lg:text-7xl max-w-5xl mx-auto text-center leading-tight">
+          <div className="text-6xl md:text-8xl lg:text-8xl max-w-5xl mx-auto text-center leading-tight">
             We create interfaces. Guided by insights. Designed with intention. Made for humans. To generate real value.
           </div>
         </div>
