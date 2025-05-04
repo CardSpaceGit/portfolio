@@ -25,7 +25,7 @@ export default function ProjectShowcase({
       } gap-8 md:gap-16 items-center mb-24 md:mb-36`}
     >
       {/* Image section */}
-      <div className="w-full md:w-1/2 aspect-[4/3] relative rounded-xl overflow-hidden">
+      <div className="w-full md:w-1/2 aspect-[4/3] relative rounded-2xl overflow-hidden">
         <Image src={imageUrl} alt={name} fill className="object-cover" />
       </div>
 

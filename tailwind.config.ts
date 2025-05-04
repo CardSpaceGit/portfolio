@@ -11,7 +11,7 @@ const config: Config = {
   theme: {
     extend: {
       fontSize: {
-        'xs': '0.65rem',    // 12px
+        'xs': '0.75rem',    // 12px
         'sm': '0.875rem',   // 14px
         'base': '1rem',     // 16px
         'lg': '1.125rem',   // 18px
@@ -82,8 +82,8 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-titling-gothic)", "sans-serif"],
-        titling: ["var(--font-titling-gothic)", "sans-serif"],
+        sans: ["var(--font-mtn-brighter-sans)", "sans-serif"],
+        titling: ["var(--font-mtn-brighter-sans)", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

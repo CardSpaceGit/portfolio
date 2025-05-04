@@ -418,21 +418,21 @@ export default function Home() {
 
       {/* Hero section with background effect */}
       <BackgroundCells className="bg-[#050510] w-screen mx-auto">
-        <div className="flex-1 flex flex-col justify-between min-h-[calc(100vh-80px)] container mx-auto">
+        <div className="flex-1 flex flex-col justify-between min-h-[calc(100vh-90px)] container mx-auto">
           {/* Main content area */}
           <div className="flex items-center justify-center flex-grow">
             <div className="flex flex-col items-center text-center max-w-3xl px-4 pointer-events-auto">
               {/* Fixed height container for the glitching title */}
-              <div className="text-7xl md:text-7xl font-light tracking-tight flex gap-3 mb-0 h-32 md:h-40">
+              <div className="text-9xl md:text-9xl font-light tracking-tight flex gap-3 mb-4 h-32 md:h-40">
                 <GlitchingTitle />
               </div>
 
               {/* Static text container */}
               <div className="static">
-                <div className="text-3xl md:text-4xl font-light text-gray-300 mb-6">
+                <div className="text-3xl md:text-5xl font-light text-gray-300 mb-6">
                   An Experience Product Designer — Based in South Africa
                 </div>
-                <p className="text-base md:text-md text-gray-400 leading-relaxed">
+                <p className="text-xl md:text-xl text-gray-400 leading-relaxed">
                   Imagination opens the door to remarkable experiences—enabling the creation of solutions that are
                   simple yet powerful, surpassing expectations.
                 </p>
@@ -490,7 +490,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
           {filteredProjects.map((project) => (
             <Link
-              href={`/portfolio/${project.id}-${project.name.toLowerCase().replace(/\s+/g, "-")}`}
+              href={`/portfolio/${project.id}`}
               key={project.id}
               className="group block relative overflow-hidden rounded-xl h-96 w-full"
             >
@@ -498,8 +498,9 @@ export default function Home() {
               <Image
                 src={project.imageUrl || "/placeholder.svg"}
                 alt={project.name}
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-110"
+                width={800}
+                height={900}
+                className="w-full h-[900px] object-cover transition-transform duration-500 hover:scale-110"
               />
 
               {/* Overlay content - visible on hover */}
@@ -524,7 +525,7 @@ export default function Home() {
       {/* Full-width white background section with mission statement */}
       <div className="w-full bg-white text-black py-24 mt-24">
         <div className="container mx-auto px-4">
-          <div className="text-4xl md:text-6xl lg:text-7xl font-serif max-w-5xl mx-auto text-center leading-tight">
+          <div className="text-4xl md:text-6xl lg:text-7xl max-w-5xl mx-auto text-center leading-tight">
             We create interfaces. Guided by insights. Designed with intention. Made for humans. To generate real value.
           </div>
         </div>

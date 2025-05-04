@@ -13,7 +13,7 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: var(--font-titling-gothic), sans-serif;
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
 }
 
 @layer utilities {
@@ -105,7 +105,7 @@ body {
 /* Glitch effect styles */
 .glitch-text {
   position: relative;
-  font-family: var(--font-titling-gothic), sans-serif;
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
   color: #f6d8d5;
   display: inline-block;
   opacity: 0.9;

@@ -41,11 +41,11 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20 text-center justify-center">
           {/* Contact column */}
           <div>
-            <div className="text-xl mb-6">Contact</div>
-            <ul className="space-y-3 text-gray-400">
+            <div className="text-lg mb-6">Contact</div>
+            <ul className="space-y-3 text-gray-400 text-sm">
               <li>
-                <a href="mailto:ngovin@gmail.com" className="hover:text-white transition-colors">
-                  ngovin@gmail.com
+                <a href="mailto:nqovin@gmail.com" className="hover:text-white transition-colors">
+                  nqovin@gmail.com
                 </a>
               </li>
               <li>
@@ -59,8 +59,8 @@ export default function Footer() {
 
           {/* Services column */}
           <div>
-            <div className="text-xl mb-6">Services</div>
-            <ul className="space-y-3 text-gray-400">
+            <div className="text-lg mb-6">Services</div>
+            <ul className="space-y-3 text-gray-400 text-sm">
               <li>
                 <Link href="/services/product-design" className="hover:text-white transition-colors">
                   Product Design
@@ -76,11 +76,6 @@ export default function Footer() {
                   UI Design
                 </Link>
               </li>
-              <li>
-                <Link href="/services/product-design-strategy" className="hover:text-white transition-colors">
-                  Product Design Strategy
-                </Link>
-              </li>
             </ul>
           </div>
         </div>
@@ -92,7 +87,7 @@ export default function Footer() {
               href="https://dribbble.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 text-xs hover:text-white transition-colors"
             >
               Dribbble
             </a>
@@ -100,15 +95,15 @@ export default function Footer() {
               href="https://linkedin.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-white transition-colors"
+              className="text-gray-400 text-xs hover:text-white transition-colors"
             >
               LinkedIn
             </a>
-            <a href="/contact" className="text-gray-400 hover:text-white transition-colors">
+            <a href="/contact" className="text-gray-400 text-xs hover:text-white transition-colors">
               Let's Chat
             </a>
           </div>
-          <div className="text-gray-500 text-sm">© {currentYear} All Rights Reserved.</div>
+          <div className="text-gray-500 text-xs">© {currentYear} All Rights Reserved.</div>
         </div>
       </div>
 

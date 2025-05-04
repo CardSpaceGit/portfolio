@@ -1,38 +1,36 @@
 import localFont from 'next/font/local';
 
-export const titlingGothic = localFont({
+export const mtnBrighterSans = localFont({
   src: [
     {
-      path: '../public/fonts/TitlingGothicFBExt-Thin.otf',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: '../public/fonts/TitlingGothicFBExt-Light.otf',
+      path: '../public/fonts/MTNBrighterSans-Light.ttf',
       weight: '300',
       style: 'normal',
     },
     {
-      path: '../public/fonts/TitlingGothicFBExt-Reg.otf',
+      path: '../public/fonts/MTNBrighterSans-Regular.ttf',
       weight: '400',
       style: 'normal',
     },
     {
-      path: '../public/fonts/TitlingGothicFBExt-Med.otf',
+      path: '../public/fonts/MTNBrighterSans-Medium.ttf',
       weight: '500',
       style: 'normal',
     },
     {
-      path: '../public/fonts/TitlingGothicFBExt-Bold.otf',
+      path: '../public/fonts/MTNBrighterSans-Bold.ttf',
       weight: '700',
       style: 'normal',
     },
     {
-      path: '../public/fonts/TitlingGothicFBExt-Black.otf',
-      weight: '900',
+      path: '../public/fonts/MTNBrighterSans-ExtraBold.ttf',
+      weight: '800',
       style: 'normal',
     },
   ],
-  variable: '--font-titling-gothic',
+  variable: '--font-mtn-brighter-sans',
   display: 'swap',
-}); 
+});
+
+// Also export under the old name for backward compatibility
+export const titlingGothic = mtnBrighterSans; 

@@ -323,46 +323,47 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   }, [currentId, params.id]) // Re-run when project ID changes
 
   return (
-    <main className="min-h-screen">
-      <div className="container mx-auto px-4 py-8 flex justify-between items-center">
+    <main className="min-h-screen bg-white text-black">
+      {/* White header variant */}
+      <div className="container mx-auto px-4 py-8 flex justify-between items-center bg-white text-black border-b border-gray-200">
         <Logo />
-        <Navbar />
+        <Navbar variant="white" />
       </div>
       <div className="container mx-auto px-4 py-8">
         <button
           onClick={() => router.back()}
-          className="inline-flex items-center mb-8 hover:opacity-70 transition-opacity"
+          className="inline-flex items-center mb-8 hover:opacity-70 transition-opacity text-black"
         >
           <ArrowLeft className="mr-2 h-4 w-4" />
           Back
         </button>
         <div className="w-full mx-auto">
-          <div className="text-3xl md:text-4xl font-light mb-4">{project.name}</div>
-          <p className="text-xl text-gray-400 mb-8">{project.description}</p>
+          <div className="text-3xl md:text-4xl font-light mb-4 text-black">{project.name}</div>
+          <p className="text-xl text-gray-600 mb-8">{project.description}</p>
           <div className="mb-12 overflow-hidden group cursor-pointer">
             <Image
               src={project.imageUrl || "/placeholder.svg"}
               alt={project.name}
               width={1200}
               height={800}
-              className="w-full h-auto transition-transform duration-500 group-hover:scale-105"
+              className="w-full h-[800px] transition-transform duration-500 group-hover:scale-105"
             />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             <div>
-              <div className="text-sm text-gray-400 mb-1">ROLE</div>
-              <p>{project.role}</p>
+              <div className="text-sm text-gray-500 mb-1">ROLE</div>
+              <p className="text-black">{project.role}</p>
             </div>
             <div>
-              <div className="text-sm text-gray-400 mb-1">DURATION</div>
-              <p>{project.duration}</p>
+              <div className="text-sm text-gray-500 mb-1">DURATION</div>
+              <p className="text-black">{project.duration}</p>
             </div>
             <div>
-              <div className="text-sm text-gray-400 mb-1">YEAR</div>
-              <p>{project.year}</p>
+              <div className="text-sm text-gray-500 mb-1">YEAR</div>
+              <p className="text-black">{project.year}</p>
             </div>
           </div>
-          <div className="space-y-6 text-lg">
+          <div className="space-y-6 text-lg text-gray-800">
             <p>{project.details}</p>
             <p>
               The design process began with extensive user research to understand the target audience's needs and pain
@@ -446,14 +447,14 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             <p className="text-xl max-w-2xl mx-auto">{project.description}</p>
           </div>
           {/* Project Navigation */}
-          <div className="mt-16 flex justify-between items-center py-6 border-t border-b border-gray-800">
+          <div className="mt-16 flex justify-between items-center py-6 border-t border-b border-gray-200 bg-white text-black">
             <button
               onClick={() => navigateToProject(prevId, adjacentProjects.prev.name)}
-              className="flex items-center space-x-2 group hover:text-gray-300 transition-colors"
+              className="flex items-center space-x-2 group hover:text-gray-600 transition-colors"
             >
               <ChevronLeft className="h-5 w-5 transform group-hover:-translate-x-1 transition-transform" />
               <div className="text-left">
-                <div className="text-sm text-gray-400">Previous</div>
+                <div className="text-sm text-gray-500">Previous</div>
                 <div className="font-medium">{adjacentProjects.prev.name}</div>
               </div>
             </button>
@@ -467,7 +468,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                     key={i}
                     onClick={() => navigateToProject(projectId, projectName)}
                     className={`w-2 h-2 rounded-full transition-all ${
-                      projectId === currentId ? "bg-white scale-125" : "bg-gray-600 hover:bg-gray-400"
+                      projectId === currentId ? "bg-black scale-125" : "bg-gray-300 hover:bg-gray-400"
                     }`}
                     aria-label={`Go to ${projectName}`}
                   />
@@ -477,10 +478,10 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
             <button
               onClick={() => navigateToProject(nextId, adjacentProjects.next.name)}
-              className="flex items-center space-x-2 group hover:text-gray-300 transition-colors"
+              className="flex items-center space-x-2 group hover:text-gray-600 transition-colors"
             >
               <div className="text-right">
-                <div className="text-sm text-gray-400">Next</div>
+                <div className="text-sm text-gray-500">Next</div>
                 <div className="font-medium">{adjacentProjects.next.name}</div>
               </div>
               <ChevronRight className="h-5 w-5 transform group-hover:translate-x-1 transition-transform" />

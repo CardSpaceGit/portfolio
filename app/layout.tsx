@@ -1,7 +1,7 @@
 import type React from "react"
 import type { Metadata } from "next/dist/lib/metadata/types/metadata-interface"
 import "./globals.css"
-import { titlingGothic } from "./fonts"
+import { mtnBrighterSans } from "./fonts"
 import Footer from "@/components/footer"
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${titlingGothic.variable} bg-[#050510] text-white min-h-screen`}>
+      <body className={`${mtnBrighterSans.variable} bg-[#050510] text-white min-h-screen`}>
         {children}
         <Footer />
       </body>

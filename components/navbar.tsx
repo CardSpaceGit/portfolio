@@ -3,8 +3,9 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-export default function Navbar() {
+export default function Navbar({ variant = "default" }: { variant?: "default" | "white" }) {
   const pathname = usePathname()
+  const isWhiteVariant = variant === "white"
 
   const navItems = [
     { name: "PORTFOLIO", path: "/" },
@@ -20,9 +21,9 @@ export default function Navbar() {
           href={item.path}
           className={`relative pb-1 ${
             pathname === item.path
-              ? "after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white"
+              ? `after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-${isWhiteVariant ? 'black' : 'white'}`
               : "hover:opacity-70 transition-opacity"
-          }`}
+          } ${isWhiteVariant ? 'text-black' : 'text-white'}`}
         >
           {item.name}
         </Link>

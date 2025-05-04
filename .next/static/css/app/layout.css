@@ -149,7 +149,7 @@ html,
   -webkit-text-size-adjust: 100%; /* 2 */
   -moz-tab-size: 4; /* 3 */
   tab-size: 4; /* 3 */
-  font-family: var(--font-titling-gothic), sans-serif; /* 4 */
+  font-family: var(--font-mtn-brighter-sans), sans-serif; /* 4 */
   font-feature-settings: normal; /* 5 */
   font-variation-settings: normal; /* 6 */
   -webkit-tap-highlight-color: transparent; /* 7 */
@@ -978,6 +978,12 @@ body {
 .h-\[20rem\] {
   height: 20rem;
 }
+.h-\[800px\] {
+  height: 800px;
+}
+.h-\[900px\] {
+  height: 900px;
+}
 .h-\[var\(--radix-navigation-menu-viewport-height\)\] {
   height: var(--radix-navigation-menu-viewport-height);
 }
@@ -1022,6 +1028,9 @@ body {
 }
 .min-h-svh {
   min-height: 100svh;
+}
+.min-h-\[calc\(100vh-90px\)\] {
+  min-height: calc(100vh - 90px);
 }
 .w-0 {
   width: 0px;
@@ -1395,6 +1404,9 @@ body {
 .break-words {
   overflow-wrap: break-word;
 }
+.rounded-2xl {
+  border-radius: 1rem;
+}
 .rounded-\[2px\] {
   border-radius: 2px;
 }
@@ -1467,6 +1479,10 @@ body {
 .border-destructive\/50 {
   border-color: hsl(var(--destructive) / 0.5);
 }
+.border-gray-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity, 1));
+}
 .border-gray-800 {
   --tw-border-opacity: 1;
   border-color: rgb(31 41 55 / var(--tw-border-opacity, 1));
@@ -1520,6 +1536,10 @@ body {
 .bg-background {
   background-color: hsl(var(--background));
 }
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity, 1));
+}
 .bg-black\/30 {
   background-color: rgb(0 0 0 / 0.3);
 }
@@ -1546,9 +1566,9 @@ body {
 .bg-foreground {
   background-color: hsl(var(--foreground));
 }
-.bg-gray-600 {
+.bg-gray-300 {
   --tw-bg-opacity: 1;
-  background-color: rgb(75 85 99 / var(--tw-bg-opacity, 1));
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
 }
 .bg-muted {
   background-color: hsl(var(--muted));
@@ -1762,11 +1782,8 @@ body {
 .font-mono {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
-.font-serif {
-  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
-}
 .font-titling {
-  font-family: var(--font-titling-gothic), sans-serif;
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
 }
 .text-2xl {
   font-size: 1.5rem;
@@ -1799,7 +1816,10 @@ body {
   font-size: 1.25rem;
 }
 .text-xs {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
+}
+.text-9xl {
+  font-size: 8rem;
 }
 .font-bold {
   font-weight: 700;
@@ -1877,6 +1897,14 @@ body {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity, 1));
+}
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
+}
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity, 1));
 }
 .text-muted-foreground {
   color: hsl(var(--muted-foreground));
@@ -2086,13 +2114,13 @@ body {
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));
-  font-family: var(--font-titling-gothic), sans-serif;
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
 }
 
 /* Glitch effect styles */
 .glitch-text {
   position: relative;
-  font-family: var(--font-titling-gothic), sans-serif;
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
   color: #f6d8d5;
   display: inline-block;
   opacity: 0.9;
@@ -2456,9 +2484,9 @@ body {
   color: hsl(var(--foreground));
 }
 
-.hover\:text-gray-300:hover {
+.hover\:text-gray-600:hover {
   --tw-text-opacity: 1;
-  color: rgb(209 213 219 / var(--tw-text-opacity, 1));
+  color: rgb(75 85 99 / var(--tw-text-opacity, 1));
 }
 
 .hover\:text-muted-foreground:hover {
@@ -3339,7 +3367,19 @@ body {
   }
 
   .md\:text-xs {
-    font-size: 0.65rem;
+    font-size: 0.75rem;
+  }
+
+  .md\:text-lg {
+    font-size: 1.125rem;
+  }
+
+  .md\:text-xl {
+    font-size: 1.25rem;
+  }
+
+  .md\:text-base {
+    font-size: 1rem;
   }
 
   .md\:opacity-0 {
@@ -3575,7 +3615,7 @@ body {
 }
 
 .\[\&_\[cmdk-group-heading\]\]\:text-xs [cmdk-group-heading] {
-  font-size: 0.65rem;
+  font-size: 0.75rem;
 }
 
 .\[\&_\[cmdk-group-heading\]\]\:font-medium [cmdk-group-heading] {
@@ -3674,57 +3714,49 @@ body {
   cursor: e-resize;
 }
 
-/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[3].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[3].use[2]!./node_modules/next/font/local/target.css?{"path":"app/fonts.ts","import":"","arguments":[{"src":[{"path":"../public/fonts/TitlingGothicFBExt-Thin.otf","weight":"100","style":"normal"},{"path":"../public/fonts/TitlingGothicFBExt-Light.otf","weight":"300","style":"normal"},{"path":"../public/fonts/TitlingGothicFBExt-Reg.otf","weight":"400","style":"normal"},{"path":"../public/fonts/TitlingGothicFBExt-Med.otf","weight":"500","style":"normal"},{"path":"../public/fonts/TitlingGothicFBExt-Bold.otf","weight":"700","style":"normal"},{"path":"../public/fonts/TitlingGothicFBExt-Black.otf","weight":"900","style":"normal"}],"variable":"--font-titling-gothic","display":"swap"}],"variableName":"titlingGothic"} ***!
-  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[3].use[1]!./node_modules/next/dist/build/webpack/loaders/next-font-loader/index.js??ruleSet[1].rules[13].oneOf[3].use[2]!./node_modules/next/font/local/target.css?{"path":"app/fonts.ts","import":"","arguments":[{"src":[{"path":"../public/fonts/MTNBrighterSans-Light.ttf","weight":"300","style":"normal"},{"path":"../public/fonts/MTNBrighterSans-Regular.ttf","weight":"400","style":"normal"},{"path":"../public/fonts/MTNBrighterSans-Medium.ttf","weight":"500","style":"normal"},{"path":"../public/fonts/MTNBrighterSans-Bold.ttf","weight":"700","style":"normal"},{"path":"../public/fonts/MTNBrighterSans-ExtraBold.ttf","weight":"800","style":"normal"}],"variable":"--font-mtn-brighter-sans","display":"swap"}],"variableName":"mtnBrighterSans"} ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 @font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/4673f3d210be7b1c-s.p.otf) format('opentype');
-font-display: swap;
-font-weight: 100;
-font-style: normal;
-}
-
-@font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/3bbd103e93c416ee-s.p.otf) format('opentype');
+font-family: 'mtnBrighterSans';
+src: url(/_next/static/media/d3f89ebe6c387386-s.p.ttf) format('truetype');
 font-display: swap;
 font-weight: 300;
 font-style: normal;
 }
 
 @font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/e962e6429a8aa882-s.p.otf) format('opentype');
+font-family: 'mtnBrighterSans';
+src: url(/_next/static/media/a12c24351fb5b524-s.p.ttf) format('truetype');
 font-display: swap;
 font-weight: 400;
 font-style: normal;
 }
 
 @font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/2afa8254f558f5d8-s.p.otf) format('opentype');
+font-family: 'mtnBrighterSans';
+src: url(/_next/static/media/2cf44ed68f83cc69-s.p.ttf) format('truetype');
 font-display: swap;
 font-weight: 500;
 font-style: normal;
 }
 
 @font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/b6868cef43abe874-s.p.otf) format('opentype');
+font-family: 'mtnBrighterSans';
+src: url(/_next/static/media/60a31f62e980ad07-s.p.ttf) format('truetype');
 font-display: swap;
 font-weight: 700;
 font-style: normal;
 }
 
 @font-face {
-font-family: 'titlingGothic';
-src: url(/_next/static/media/51c1be4693fe467a-s.p.otf) format('opentype');
+font-family: 'mtnBrighterSans';
+src: url(/_next/static/media/13ee48b65af5b931-s.p.ttf) format('truetype');
 font-display: swap;
-font-weight: 900;
+font-weight: 800;
 font-style: normal;
-}@font-face {font-family: 'titlingGothic Fallback';src: local("Arial");ascent-override: 42.48%;descent-override: 10.62%;line-gap-override: 10.62%;size-adjust: 188.32%
-}.__className_a14739 {font-family: 'titlingGothic', 'titlingGothic Fallback'
-}.__variable_a14739 {--font-titling-gothic: 'titlingGothic', 'titlingGothic Fallback'
+}@font-face {font-family: 'mtnBrighterSans Fallback';src: local("Arial");ascent-override: 88.31%;descent-override: 29.32%;line-gap-override: 0.00%;size-adjust: 110.51%
+}.__className_a6976a {font-family: 'mtnBrighterSans', 'mtnBrighterSans Fallback'
+}.__variable_a6976a {--font-mtn-brighter-sans: 'mtnBrighterSans', 'mtnBrighterSans Fallback'
 }
 
