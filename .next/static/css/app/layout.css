@@ -748,6 +748,9 @@ body {
 .top-full {
   top: 100%;
 }
+.bottom-4 {
+  bottom: 1rem;
+}
 .z-10 {
   z-index: 10;
 }
@@ -1024,6 +1027,9 @@ body {
 }
 .h-24 {
   height: 6rem;
+}
+.h-\[40px\] {
+  height: 40px;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -3403,6 +3409,10 @@ body {
 
   .sm\:text-left {
     text-align: left;
+  }
+
+  .sm\:text-lg {
+    font-size: 1.125rem;
   }
 }
 

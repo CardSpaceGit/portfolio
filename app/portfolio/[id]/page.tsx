@@ -107,7 +107,7 @@ function LikeButton({ projectId }: { projectId: number }) {
 const getProjectNameById = (id: number): string => {
   const projectData = {
     // Mobile Applications (9)
-    1: "WanderMap",
+    1: "CardSpace",
     2: "MealPrep Pro",
     3: "FocusFlow",
     4: "PocketClinic",
@@ -181,17 +181,17 @@ export default function ProjectPage({ params }: ProjectPageProps) {
     const projectData = {
       // Mobile Applications (9)
       1: {
-        name: "WanderMap",
+        name: "CardSpace",
         tagline: "Explore like a local, anywhere in the world.",
         description:
           "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals.",
         category: "Mobile Applications",
-        details: "WanderMap is a mobile application designed to transform how travelers explore new destinations. By combining location-based technology with curated recommendations from locals, it helps users discover authentic experiences beyond typical tourist attractions.",
+        details: "CardSpace is a mobile application designed to transform how travelers explore new destinations. By combining location-based technology with curated recommendations from locals, it helps users discover authentic experiences beyond typical tourist attractions.",
         role: "UX/UI Designer & Product Manager",
         duration: "6 months",
         year: "2023",
         processDetails: [
-          "The development of WanderMap began with extensive field research in various travel destinations, interviewing both tourists and locals to understand pain points in current travel experiences.",
+          "The development of CardSpace began with extensive field research in various travel destinations, interviewing both tourists and locals to understand pain points in current travel experiences.",
           "User personas were created to target different types of travelers, from adventure seekers to cultural enthusiasts, informing feature prioritization and interface design.",
           "The offline functionality was a key technical challenge that required multiple iterations and user testing to ensure reliability in areas with limited connectivity."
         ]

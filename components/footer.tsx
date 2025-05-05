@@ -39,8 +39,8 @@ export default function Footer() {
             <div className="text-lg mb-6">Contact</div>
             <ul className="space-y-3 text-gray-400 text-sm">
               <li>
-                <a href="mailto:nqovin@gmail.com" className="hover:text-white transition-colors hover-glitch">
-                  nqovin@gmail.com
+                <a href="mailto:nqovun@gmail.com" className="hover:text-white transition-colors hover-glitch">
+                  nqovun@gmail.com
                 </a>
               </li>
               <li>
@@ -98,7 +98,7 @@ export default function Footer() {
               Let's Chat
             </a>
           </div>
-          <div className="text-gray-500 text-xs">© {currentYear} All Rights Reserved.</div>
+          <div className="text-gray-500 text-xs">© {currentYear} Made in Johannesburg, South Africa with Cursor.</div>
         </div>
       </div>
 

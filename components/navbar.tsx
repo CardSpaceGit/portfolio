@@ -68,9 +68,11 @@ export default function Navbar({ variant = "default" }: { variant?: "default" | 
   // Mobile sidebar menu
   if (isMobile) {
     return (
-      <div className="w-full flex justify-between items-center">
+      <div className="w-full flex justify-between items-center h-[40px]">
         {/* Logo on the left */}
-        <Logo variant={isWhiteVariant ? "dark" : "light"} />
+        <div className="w-10 h-10 flex items-center">
+          <Logo variant={isWhiteVariant ? "dark" : "light"} />
+        </div>
         
         {/* Menu button on the right */}
         <button 
@@ -101,7 +103,7 @@ export default function Navbar({ variant = "default" }: { variant?: "default" | 
             isMenuOpen ? 'translate-x-0' : '-translate-x-full'
           }`}
         >
-          <div className="mb-12">
+          <div className="mb-12 w-10 h-10">
             <Logo variant="dark" />
           </div>
           <nav className="flex flex-col space-y-8">
@@ -126,9 +128,11 @@ export default function Navbar({ variant = "default" }: { variant?: "default" | 
   
   // Desktop navbar
   return (
-    <div className="w-full flex justify-between items-center">
+    <div className="w-full flex justify-between items-center h-[40px]">
       {/* Logo on the left */}
-      <Logo variant={isWhiteVariant ? "dark" : "light"} />
+      <div className="w-10 h-10 flex items-center">
+        <Logo variant={isWhiteVariant ? "dark" : "light"} />
+      </div>
       
       {/* Navigation links on the right */}
       <nav className="flex space-x-8 text-xs">

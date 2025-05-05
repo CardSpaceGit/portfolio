@@ -249,11 +249,11 @@ export default function Home() {
     // Mobile Applications (9)
     {
       id: 1,
-      name: "WanderMap",
+      name: "CardSpace",
       tagline: "Explore like a local, anywhere in the world.",
       description:
-        "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals. WanderMap helps travelers discover authentic experiences beyond typical tourist attractions.",
-      imageUrl: "/projects/wandermap/main.jpg",
+        "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals. CardSpace helps travelers discover authentic experiences beyond typical tourist attractions.",
+      imageUrl: "/projects/cardspace/main.jpg",
       category: "Mobile Applications" as const,
     },
     {
@@ -437,7 +437,7 @@ export default function Home() {
                 <div className="text-2xl md:text-5xl font-light text-gray-300 mb-6">
                   An Experience Product Designer — Based in South Africa
                 </div>
-                <p className="text-xl md:text-xl text-gray-400 leading-relaxed">
+                <p className="sm:text-lg md:text-xl text-gray-400 leading-relaxed">
                   Imagination opens the door to remarkable experiences—enabling the creation of solutions that are
                   simple yet powerful, surpassing expectations.
                 </p>
@@ -458,12 +458,27 @@ export default function Home() {
                   Dribbble
                 </a>
                 <a
-                  href="https://instagram.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    navigator.clipboard.writeText("nqovun@gmail.com").then(() => {
+                      // Create and show toast notification
+                      const toast = document.createElement("div");
+                      toast.className = "fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-2 rounded-md shadow-lg z-50 text-sm";
+                      toast.innerText = "Email copied to clipboard!";
+                      document.body.appendChild(toast);
+                      
+                      // Remove toast after 3 seconds
+                      setTimeout(() => {
+                        toast.classList.add("opacity-0", "transition-opacity", "duration-300");
+                        setTimeout(() => {
+                          document.body.removeChild(toast);
+                        }, 300);
+                      }, 3000);
+                    });
+                  }}
+                  className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch cursor-pointer"
                 >
-                  Instagram
+                  Let's Chat
                 </a>
                 <a
                   href="https://linkedin.com"
