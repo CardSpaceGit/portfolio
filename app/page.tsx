@@ -10,6 +10,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { motion, useAnimation } from "framer-motion"
 import { cn } from "@/lib/utils"
+import { projectsArray } from "@/lib/projects"
 
 // Background Cells Component
 interface BackgroundCellsProps {
@@ -244,149 +245,8 @@ export default function Home() {
   const [showFilter, setShowFilter] = useState(false)
   const projectsRef = useRef<HTMLDivElement>(null)
 
-  // Updated projects data with all 15 projects
-  const projects = [
-    // Mobile Applications (9)
-    {
-      id: 1,
-      name: "CardSpace",
-      tagline: "Explore like a local, anywhere in the world.",
-      description:
-        "A location-based travel companion that offers personalized recommendations, offline maps, and hidden gems curated by locals. CardSpace helps travelers discover authentic experiences beyond typical tourist attractions.",
-      imageUrl: "/projects/cardspace/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 2,
-      name: "MealPrep Pro",
-      tagline: "Meal planning simplified for busy professionals.",
-      description:
-        "An all-in-one meal planning app that generates personalized weekly meal plans based on dietary preferences, nutritional goals, and cooking skill levels. It includes automated grocery lists and meal preparation techniques.",
-      imageUrl: "/projects/mealprep-pro/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 3,
-      name: "FocusFlow",
-      tagline: "Master your productivity, one focused session at a time.",
-      description:
-        "A productivity app combining the Pomodoro technique with flow state science, helping users achieve deep work through customized work intervals, ambient soundscapes, and distraction blocking.",
-      imageUrl: "/projects/focusflow/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 4,
-      name: "PocketClinic",
-      tagline: "Healthcare in your pocket, anytime, anywhere.",
-      description:
-        "A telemedicine platform connecting patients with healthcare providers for virtual consultations. Features include secure video calls, medical history tracking, and an intuitive mobile interface.",
-      imageUrl: "/projects/pocketclinic/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 5,
-      name: "GreenThumb",
-      tagline: "Your personal plant care assistant.",
-      description:
-        "A plant care companion app that identifies plants through image recognition and provides care schedules, growth tracking, and connects users with a community of plant enthusiasts.",
-      imageUrl: "/projects/greenthumb/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 6,
-      name: "BudgetBuddy",
-      tagline: "Making financial freedom achievable.",
-      description:
-        "A personal finance app that automatically categorizes expenses and provides visual spending insights. It includes budget planning tools and smart recommendations to help users reach their financial goals.",
-      imageUrl: "/projects/budgetbuddy/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 7,
-      name: "FitSync",
-      tagline: "Personalized fitness, perfectly synchronized.",
-      description:
-        "A fitness tracking app that adapts workouts based on user progress and available equipment. It includes diet tracking, custom exercise demonstrations, and comprehensive health monitoring.",
-      imageUrl: "/projects/fitsync/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 8,
-      name: "NightSky",
-      tagline: "The universe in your hands.",
-      description:
-        "An augmented reality astronomy app that identifies celestial objects when pointing your phone at the sky. It includes detailed information on stars, planets, and upcoming astronomical events.",
-      imageUrl: "/projects/nightsky/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-    {
-      id: 9,
-      name: "LinguaLeap",
-      tagline: "Language learning that fits your life.",
-      description:
-        "An adaptive language learning app that uses AI to create personalized lesson plans. It features speech recognition for pronunciation feedback and gamified elements to integrate learning into daily activities.",
-      imageUrl: "/projects/lingualeap/main.jpg",
-      category: "Mobile Applications" as const,
-    },
-
-    // Desktop Applications (4)
-    {
-      id: 10,
-      name: "StudioFlow",
-      tagline: "Creative workflow management for design teams.",
-      description:
-        "A comprehensive project management platform for creative teams that streamlines asset management, feedback cycles, and approval processes while integrating with popular design tools.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=StudioFlow+Desktop",
-      category: "Desktop Applications" as const,
-    },
-    {
-      id: 11,
-      name: "CodeCanvas",
-      tagline: "Where coding meets visual thinking.",
-      description:
-        "An innovative IDE that combines traditional coding with visual programming elements, making software development more intuitive and accessible for both beginners and experienced developers.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=CodeCanvas+Desktop",
-      category: "Desktop Applications" as const,
-    },
-    {
-      id: 12,
-      name: "DataLoom",
-      tagline: "Weaving complex data into clear insights.",
-      description:
-        "A powerful data visualization and analysis tool that transforms complex datasets into interactive dashboards and reports without requiring advanced technical skills.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=DataLoom+Desktop",
-      category: "Desktop Applications" as const,
-    },
-    {
-      id: 13,
-      name: "SoundScape",
-      tagline: "Professional audio production made accessible.",
-      description:
-        "A digital audio workstation designed for podcasters, musicians, and content creators that simplifies complex audio editing tasks while maintaining professional-grade output quality.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=SoundScape+Desktop",
-      category: "Desktop Applications" as const,
-    },
-
-    // Branding (2)
-    {
-      id: 14,
-      name: "EcoEssence",
-      tagline: "Sustainable branding for conscious businesses.",
-      description:
-        "A complete brand identity system for an eco-friendly product line, including logo design, sustainable packaging guidelines, color palette, typography, and marketing materials that emphasize environmental responsibility.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=EcoEssence+Branding",
-      category: "Branding" as const,
-    },
-    {
-      id: 15,
-      name: "TechNexus",
-      tagline: "Bridging humanity and technology through design.",
-      description:
-        "A comprehensive rebranding project for a technology conglomerate, creating a cohesive visual language across diverse product lines while positioning the brand at the intersection of cutting-edge innovation and human-centered design.",
-      imageUrl: "/placeholder.svg?height=600&width=500&text=TechNexus+Branding",
-      category: "Branding" as const,
-    },
-  ]
+  // Use projects data from the shared lib/projects.ts file
+  const projects = projectsArray;
 
   // Filter projects based on active category
   const filteredProjects = projects.filter((project) => project.category === activeFilter)
