@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { useState } from "react"
 import Image from "next/image"
+import Logo from "./logo"
 
 export default function Footer() {
   const currentYear = new Date().getFullYear()
@@ -17,14 +18,8 @@ export default function Footer() {
       <div className="container mx-auto max-w-6xl">
         {/* Logo */}
         <div className="flex justify-center mb-12">
-          <div className="w-16 h-16 relative">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-VPFMVUUdHWksAexuHXf7HnFT8baVSs.png"
-              alt="Logo"
-              width={64}
-              height={64}
-              className="object-contain"
-            />
+          <div className="transform scale-150">
+            <Logo variant="light" />
           </div>
         </div>
 
