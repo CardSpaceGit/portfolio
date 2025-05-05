@@ -417,10 +417,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen flex flex-col bg-[#050510]">
-      <div className="container mx-auto px-4 py-8 flex justify-between items-center">
-        <Logo />
+      <header className="container mx-auto px-4 py-8 flex justify-between items-center">
         <Navbar />
-      </div>
+      </header>
 
       {/* Hero section with background effect */}
       <BackgroundCells className="bg-[#050510] w-screen mx-auto">
@@ -429,13 +428,13 @@ export default function Home() {
           <div className="flex items-center justify-center flex-grow">
             <div className="flex flex-col items-center text-center max-w-3xl px-4 pointer-events-auto">
               {/* Fixed height container for the glitching title */}
-              <div className="text-9xl md:text-9xl font-light tracking-tight flex gap-3 mb-4 h-32 md:h-40">
+              <div className="text-4xl sm:mb-0 md:text-9xl font-light tracking-tight flex gap-3 md:mb-4 md:h-40">
                 <GlitchingTitle />
               </div>
 
               {/* Static text container */}
-              <div className="static md:w-[800px]">
-                <div className="text-3xl md:text-5xl font-light text-gray-300 mb-6">
+              <div className="static md:w-[800px] px-4 min-h-[200px] sm:min-h-[160px]">
+                <div className="text-2xl md:text-5xl font-light text-gray-300 mb-6">
                   An Experience Product Designer — Based in South Africa
                 </div>
                 <p className="text-xl md:text-xl text-gray-400 leading-relaxed">
@@ -482,7 +481,7 @@ export default function Home() {
 
       {/* Filter section that appears on scroll */}
       <div
-        className={`sticky h-20 top-0 z-20 bg-[#050510]/40 backdrop-blur-2xl transition-all duration-500 ${
+        className={`sticky h-24 sm:h-20 px-8 top-0 z-20 bg-[#050510]/40 backdrop-blur-2xl transition-all duration-500 ${
           showFilter ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
@@ -514,9 +513,9 @@ export default function Home() {
                 }}
               />
 
-              {/* Overlay content - visible on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <div className="transform translate-y-8 group-hover:translate-y-0 transition-transform duration-300">
+              {/* Overlay content - visible on mobile by default, hover on desktop */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                <div className="transform md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-300">
                   <span className="text-xs text-white uppercase tracking-wider mb-3 inline-block hover-glitch">
                     {project.category}
                   </span>
@@ -529,8 +528,8 @@ export default function Home() {
                   <p className="text-white text-sm mb-4 line-clamp-2 hover-glitch">
                     {project.description}
                   </p>
-                  <span className="inline-flex items-center text-white border-b border-white pb-1 group-hover:pl-2 transition-all duration-300 hover-glitch">
-                    View Project <span className="ml-2 group-hover:ml-3 transition-all duration-300">→</span>
+                  <span className="inline-flex items-center text-white border-b border-white pb-1 md:group-hover:pl-2 transition-all duration-300 hover-glitch">
+                    View Project <span className="ml-2 md:group-hover:ml-3 transition-all duration-300">→</span>
                   </span>
                 </div>
               </div>

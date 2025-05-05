@@ -485,10 +485,9 @@ export default function ProjectPage({ params }: ProjectPageProps) {
   return (
     <main className="min-h-screen bg-white text-black">
       {/* White header variant */}
-      <div className="container mx-auto px-4 py-8 flex justify-between items-center bg-white text-blue-950 border-b border-gray-200">
-        <Logo />
+      <header className="container mx-auto px-4 py-8 flex justify-between items-center bg-white text-blue-950 border-b border-gray-200">
         <Navbar variant="white" />
-      </div>
+      </header>
       <div className="container mx-auto px-4 py-8">
         <button
           onClick={() => router.back()}
