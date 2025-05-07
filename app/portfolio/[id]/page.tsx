@@ -296,7 +296,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {/* Project Images Grid - Updated asymmetrical layout without containers */}
           <div className="mt-16 grid grid-cols-12 gap-4">
             {/* Top row */}
-            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[62.5%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.main || "/placeholder.svg"}
@@ -311,7 +311,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
               </div>
             </div>
-            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[125%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.secondary[0] || "/placeholder.svg"}
@@ -328,7 +328,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
             </div>
 
             {/* Bottom row */}
-            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[125%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.secondary[1] || "/placeholder.svg"}
@@ -343,7 +343,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
               </div>
             </div>
-            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[37.5%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.secondary[2] || "/placeholder.svg"}
@@ -363,7 +363,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {/* Additional Project Images - Second asymmetrical grid */}
           <div className="mt-8 grid grid-cols-12 gap-4">
             {/* Additional images */}
-            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[66.7%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.secondary[3] || "/placeholder.svg"}
@@ -378,7 +378,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
                 />
               </div>
             </div>
-            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl">
+            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
               <div className="relative pt-[66.7%] rounded-6xl overflow-hidden w-full h-full">
                 <Image
                   src={project.images.secondary[4] || "/placeholder.svg"}
@@ -397,8 +397,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           {/* Project showcase section with Like button */}
           <div className="mt-24 py-16 bg-white text-black text-center">
             <LikeButton projectId={project.id} />
-            <div className="text-5xl font-bold mb-6">{project.name}</div>
-            <p className="text-xl max-w-2xl mx-auto">{project.description}</p>
+            <div className="text-3xl font-bold mb-2">{project.name}</div>
+            <p className="text-md max-w-2xl mx-auto">{project.description}</p>
           </div>
           {/* Project Navigation */}
           <div className="mt-16 flex justify-between items-center py-6 border-t border-b border-gray-200 bg-white text-black">

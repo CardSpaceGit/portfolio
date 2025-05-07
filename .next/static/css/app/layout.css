@@ -1537,6 +1537,10 @@ body {
 .border-sidebar-border {
   border-color: hsl(var(--sidebar-border));
 }
+.border-slate-200 {
+  --tw-border-opacity: 1;
+  border-color: rgb(226 232 240 / var(--tw-border-opacity, 1));
+}
 .border-transparent {
   border-color: transparent;
 }
@@ -1847,9 +1851,6 @@ body {
 }
 .text-4xl {
   font-size: 2.25rem;
-}
-.text-5xl {
-  font-size: 3rem;
 }
 .text-6xl {
   font-size: 3.75rem;

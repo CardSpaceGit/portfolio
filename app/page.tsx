@@ -295,11 +295,13 @@ export default function Home() {
               {/* Static text container */}
               <div className="static md:w-[800px] px-4 min-h-[200px] sm:min-h-[160px]">
                 <div className="text-2xl md:text-5xl font-light text-gray-300 mb-6">
-                  An Experience Product Designer — Based in South Africa
+                  Designing and building lean, scalable products for startups.
                 </div>
                 <p className="sm:text-lg md:text-xl text-gray-400 leading-relaxed">
-                  Imagination opens the door to remarkable experiences—enabling the creation of solutions that are
-                  simple yet powerful, surpassing expectations.
+                Helping teams and founders: <br />
+                → Design great user experiences
+                → Build functional products using AI, Cursor, React Native, Next.js 
+                → Save costs and ship faster (without needing huge dev teams)
                 </p>
               </div>
             </div>
