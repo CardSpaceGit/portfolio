@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import dynamic from "next/dynamic"
-import { useRouter } from "next/navigation"
+import { useRouter, useParams } from "next/navigation"
 import Navbar from "@/components/navbar"
 import Logo from "@/components/logo"
 import Image from "next/image"
@@ -111,28 +111,38 @@ const getProjectNameById = (id: number): string => {
 
 export default function ProjectPage({ params }: ProjectPageProps) {
   const router = useRouter()
+  const routeParams = useParams()
   
   // Use useState with a function to initialize the state, avoiding direct use of params.id
   const [currentId, setCurrentId] = useState<number>(() => {
     try {
-      const idString = params.id?.split("-")[0] || "1"
+      // Use routeParams instead of params
+      const idString = typeof routeParams.id === 'string' 
+        ? routeParams.id.split("-")[0] 
+        : Array.isArray(routeParams.id) 
+          ? routeParams.id[0].split("-")[0] 
+          : "1"
       return Number.parseInt(idString)
     } catch (e) {
       return 1 // Default to first project if parsing fails
     }
   })
   
-  // Update currentId when params.id changes
+  // Update currentId when routeParams.id changes
   useEffect(() => {
-    if (params.id) {
+    if (routeParams.id) {
       try {
-        const idString = params.id.split("-")[0]
+        const idString = typeof routeParams.id === 'string' 
+          ? routeParams.id.split("-")[0] 
+          : Array.isArray(routeParams.id) 
+            ? routeParams.id[0].split("-")[0] 
+            : "1"
         setCurrentId(Number.parseInt(idString))
       } catch (e) {
         setCurrentId(1) // Default to first project if parsing fails
       }
     }
-  }, [params.id])
+  }, [routeParams.id])
   
   const [project, setProject] = useState({
     id: 1, // Will be updated by effect
@@ -259,7 +269,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="text-3xl md:text-4xl font-medium mb-4 text-blue-950">{project.name}</div>
           <p className="text-xl text-blue-950 mb-8">{project.description}</p>
           <div className="mb-12 overflow-hidden group cursor-pointer rounded-6xl">
-            <div className="relative pt-[75%] rounded-6xl overflow-hidden w-full h-full">
+            <div className="relative h-[445px] md:h-auto md:pt-[75%] rounded-6xl overflow-hidden w-full h-full">
               <Image
                 src={project.imageUrl || "/placeholder.svg"}
                 alt={project.name}
@@ -297,7 +307,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mt-16 grid grid-cols-12 gap-4">
             {/* Top row */}
             <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[62.5%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[64%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.main || "/placeholder.svg"}
                   alt={`${project.name} main view`}
@@ -312,7 +322,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </div>
             <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[125%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[130%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.secondary[0] || "/placeholder.svg"}
                   alt={`${project.name} detail view`}
@@ -329,7 +339,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
 
             {/* Bottom row */}
             <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[125%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[138%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.secondary[1] || "/placeholder.svg"}
                   alt={`${project.name} detail view`}
@@ -344,7 +354,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </div>
             <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[37.5%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[68%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.secondary[2] || "/placeholder.svg"}
                   alt={`${project.name} overview`}
@@ -364,7 +374,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
           <div className="mt-8 grid grid-cols-12 gap-4">
             {/* Additional images */}
             <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[66.7%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.secondary[3] || "/placeholder.svg"}
                   alt={`${project.name} additional view`}
@@ -379,7 +389,7 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </div>
             <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative pt-[66.7%] rounded-6xl overflow-hidden w-full h-full">
+              <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
                 <Image
                   src={project.images.secondary[4] || "/placeholder.svg"}
                   alt={`${project.name} additional view`}

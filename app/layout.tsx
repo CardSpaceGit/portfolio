@@ -17,7 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${mtnBrighterSans.variable} bg-[#050510] text-white min-h-screen`}>
+      <body 
+        className={`${mtnBrighterSans.variable} bg-[#050510] text-white min-h-screen`}
+        suppressHydrationWarning
+      >
         {children}
         <Footer />
       </body>

@@ -1015,6 +1015,9 @@ body {
 .h-svh {
   height: 100svh;
 }
+.h-\[445px\] {
+  height: 445px;
+}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -3317,6 +3320,10 @@ body {
     height: 5rem;
   }
 
+  .sm\:h-\[445px\] {
+    height: 445px;
+  }
+
   .sm\:min-h-\[160px\] {
     min-height: 160px;
   }
@@ -3418,6 +3425,10 @@ body {
     height: 10rem;
   }
 
+  .md\:h-auto {
+    height: auto;
+  }
+
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -3476,6 +3487,86 @@ body {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:pt-\[125\%\] {
+    padding-top: 125%;
+  }
+
+  .md\:pt-\[37\.5\%\] {
+    padding-top: 37.5%;
+  }
+
+  .md\:pt-\[62\.5\%\] {
+    padding-top: 62.5%;
+  }
+
+  .md\:pt-\[66\.7\%\] {
+    padding-top: 66.7%;
+  }
+
+  .md\:pt-\[75\%\] {
+    padding-top: 75%;
+  }
+
+  .md\:pt-\[140\%\] {
+    padding-top: 140%;
+  }
+
+  .md\:pt-\[120\%\] {
+    padding-top: 120%;
+  }
+
+  .md\:pt-\[124\%\] {
+    padding-top: 124%;
+  }
+
+  .md\:pt-\[128\%\] {
+    padding-top: 128%;
+  }
+
+  .md\:pt-\[28\%\] {
+    padding-top: 28%;
+  }
+
+  .md\:pt-\[48\%\] {
+    padding-top: 48%;
+  }
+
+  .md\:pt-\[88\%\] {
+    padding-top: 88%;
+  }
+
+  .md\:pt-\[68\%\] {
+    padding-top: 68%;
+  }
+
+  .md\:pt-\[148\%\] {
+    padding-top: 148%;
+  }
+
+  .md\:pt-\[138\%\] {
+    padding-top: 138%;
+  }
+
+  .md\:pt-\[64\%\] {
+    padding-top: 64%;
+  }
+
+  .md\:pt-\[62\%\] {
+    padding-top: 62%;
+  }
+
+  .md\:pt-\[63\%\] {
+    padding-top: 63%;
+  }
+
+  .md\:pt-\[130\%\] {
+    padding-top: 130%;
+  }
+
+  .md\:pt-\[132\%\] {
+    padding-top: 132%;
   }
 
   .md\:text-4xl {
