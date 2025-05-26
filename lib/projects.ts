@@ -51,36 +51,32 @@ export const projectData: Record<number, Project> = {
   3: {
     id: 3,
     name: "LexMasFT Coal App",
-    tagline: "Master your productivity, one focused session at a time.",
+    tagline: "Track, manage and summarize weekly deliveries and pickups of material (like coal, duff, pease and blend) via containers",
     description:
-      "A productivity app combining the Pomodoro technique with flow state science, helping users achieve deep work.",
+      "This App is ideal for Coal or bulk mineral operations, Transport & logistics companies and site supervisers needing real-time oversight of stock and container movements.",
     imageUrl: "/projects/lexmasft/main.jpg",
     category: "Mobile Applications",
-    details: "LexMasFT Coal App is designed for knowledge workers who struggle with distractions and procrastination. By combining proven productivity techniques with personalized insights, the app helps users optimize their work patterns for maximum focus and output.",
-    role: "UX Researcher & Designer",
-    duration: "5 months",
-    year: "2023",
+    details: "It is designed for businesses that handle bulk materials like coal.",
+    role: "UX Researcher, User Testing & Designer",
+    duration: "6 - 8 months",
+    year: "2023 - 2024",
     processDetails: [
-      "The project began with a deep dive into productivity research, consulting with cognitive psychologists to understand the science behind focus and flow states.",
-      "User testing revealed that customizable work intervals were essential, as the traditional 25-minute Pomodoro cycle wasn't optimal for all tasks or individuals.",
-      "The ambient soundscapes feature emerged from user feedback, addressing the need for audio environments that mask distractions without becoming distractions themselves."
+      "It provides a weekly summary of deliveries and pickups, showing the total weight moved, scheduled dates, and container details. Users can monitor current stock levels by material type and view a daily activity heatmap to track operations. With clear container logs and real-time updates, the app helps streamline scheduling, improve visibility, and ensure efficient coordination across delivery and pickup activities."
     ]
   },
   4: {
     id: 4,
     name: "MTN SelfCare App",
-    tagline: "Healthcare in your pocket, anytime, anywhere.",
-    description: "A telemedicine platform connecting patients with healthcare providers for virtual consultations.",
+    tagline: "Empowring users with 24/7 access to manage their account Anytime, Anywhere",
+    description: "Self Care app is a mobile application that enables users or customers to perform high-value transactions, from simple account updates to paying bills, viewing and managing customer data and services, managing support tickets, and more.",
     imageUrl: "/projects/mtnselfcare/main.jpg",
     category: "Mobile Applications",
-    details: "MTN SelfCare App bridges the gap between patients and healthcare providers through secure video consultations, prescription management, and health monitoring tools, making quality healthcare accessible regardless of location.",
-    role: "Product Designer",
+    details: "MTN planned to launch a 24/7 internet-based Self Care app for all subscribers (prepaid and postpaid). ",
+    role: "Research, User Testing, Prototyping & Product Designer",
     duration: "8 months",
-    year: "2022",
+    year: "2023",
     processDetails: [
-      "Extensive stakeholder interviews with both healthcare providers and patients informed the development of a platform that would meet the needs of both groups.",
-      "Security and privacy considerations were paramount, requiring close collaboration with compliance experts to ensure all features met HIPAA requirements.",
-      "The interface was designed with accessibility as a core principle, ensuring the service would be usable by people with various disabilities and technical comfort levels."
+      "Users will be able to: Manage accounts, view billing, and request service changes instantly, Track real-time usage for voice, data, and SMS, Access and subscribe to MTN-CI products and services, Change tariff plans and add value-added services anytime & Top up or recharge accounts online with ease"
     ]
   },
   5: {

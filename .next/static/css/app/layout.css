@@ -813,6 +813,10 @@ body {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
+.mx-16 {
+  margin-left: 4rem;
+  margin-right: 4rem;
+}
 .-ml-4 {
   margin-left: -1rem;
 }
@@ -991,6 +995,9 @@ body {
 .h-\[40px\] {
   height: 40px;
 }
+.h-\[445px\] {
+  height: 445px;
+}
 .h-\[600px\] {
   height: 600px;
 }
@@ -1015,8 +1022,11 @@ body {
 .h-svh {
   height: 100svh;
 }
-.h-\[445px\] {
-  height: 445px;
+.h-32 {
+  height: 8rem;
+}
+.h-40 {
+  height: 10rem;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -1768,6 +1778,18 @@ body {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
+.px-24 {
+  padding-left: 6rem;
+  padding-right: 6rem;
+}
+.px-16 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.px-32 {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
 .pb-1 {
   padding-bottom: 0.25rem;
 }
@@ -1812,21 +1834,6 @@ body {
 }
 .pt-8 {
   padding-top: 2rem;
-}
-.pt-\[125\%\] {
-  padding-top: 125%;
-}
-.pt-\[37\.5\%\] {
-  padding-top: 37.5%;
-}
-.pt-\[62\.5\%\] {
-  padding-top: 62.5%;
-}
-.pt-\[66\.7\%\] {
-  padding-top: 66.7%;
-}
-.pt-\[75\%\] {
-  padding-top: 75%;
 }
 .text-left {
   text-align: left;
@@ -3304,6 +3311,21 @@ body {
     top: auto;
   }
 
+  .sm\:mx-24 {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .sm\:mx-32 {
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
   .sm\:mb-0 {
     margin-bottom: 0px;
   }
@@ -3318,10 +3340,6 @@ body {
 
   .sm\:h-20 {
     height: 5rem;
-  }
-
-  .sm\:h-\[445px\] {
-    height: 445px;
   }
 
   .sm\:min-h-\[160px\] {
@@ -3366,8 +3384,34 @@ body {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
+  .sm\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .sm\:rounded-lg {
     border-radius: var(--radius);
+  }
+
+  .sm\:px-8 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .sm\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+
+  .sm\:py-24 {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .sm\:px-32 {
+    padding-left: 8rem;
+    padding-right: 8rem;
   }
 
   .sm\:text-left {
@@ -3489,60 +3533,13 @@ body {
     padding-right: 2rem;
   }
 
-  .md\:pt-\[125\%\] {
-    padding-top: 125%;
+  .md\:px-24 {
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
-  .md\:pt-\[37\.5\%\] {
-    padding-top: 37.5%;
-  }
-
-  .md\:pt-\[62\.5\%\] {
-    padding-top: 62.5%;
-  }
-
-  .md\:pt-\[66\.7\%\] {
-    padding-top: 66.7%;
-  }
-
-  .md\:pt-\[75\%\] {
-    padding-top: 75%;
-  }
-
-  .md\:pt-\[140\%\] {
-    padding-top: 140%;
-  }
-
-  .md\:pt-\[120\%\] {
-    padding-top: 120%;
-  }
-
-  .md\:pt-\[124\%\] {
-    padding-top: 124%;
-  }
-
-  .md\:pt-\[128\%\] {
-    padding-top: 128%;
-  }
-
-  .md\:pt-\[28\%\] {
-    padding-top: 28%;
-  }
-
-  .md\:pt-\[48\%\] {
-    padding-top: 48%;
-  }
-
-  .md\:pt-\[88\%\] {
-    padding-top: 88%;
-  }
-
-  .md\:pt-\[68\%\] {
-    padding-top: 68%;
-  }
-
-  .md\:pt-\[148\%\] {
-    padding-top: 148%;
+  .md\:pt-\[130\%\] {
+    padding-top: 130%;
   }
 
   .md\:pt-\[138\%\] {
@@ -3553,20 +3550,16 @@ body {
     padding-top: 64%;
   }
 
-  .md\:pt-\[62\%\] {
-    padding-top: 62%;
+  .md\:pt-\[66\.7\%\] {
+    padding-top: 66.7%;
   }
 
-  .md\:pt-\[63\%\] {
-    padding-top: 63%;
+  .md\:pt-\[68\%\] {
+    padding-top: 68%;
   }
 
-  .md\:pt-\[130\%\] {
-    padding-top: 130%;
-  }
-
-  .md\:pt-\[132\%\] {
-    padding-top: 132%;
+  .md\:pt-\[75\%\] {
+    padding-top: 75%;
   }
 
   .md\:text-4xl {
