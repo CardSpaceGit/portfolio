@@ -18,6 +18,9 @@ export default function ProjectShowcase({
   imageUrl,
   reverse = false,
 }: ProjectShowcaseProps) {
+  // Create URL-friendly slug from project name
+  const slug = name.toLowerCase().replace(/\s+/g, "-")
+  
   return (
     <div
       className={`flex flex-col ${
@@ -34,7 +37,7 @@ export default function ProjectShowcase({
         <div className="text-3xl md:text-4xl font-light mb-6">{tagline}</div>
         <p className="text-lg text-gray-300 mb-8">{description}</p>
         <Link
-          href={`/portfolio/${id}-${name.toLowerCase().replace(/\s+/g, "-")}`}
+          href={`/${slug}`}
           className="inline-flex items-center text-white border-b border-white pb-1 hover:pl-2 transition-all duration-300"
         >
           View Project <span className="ml-2 group-hover:ml-3 transition-all duration-300">→</span>

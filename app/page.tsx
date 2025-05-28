@@ -370,48 +370,53 @@ export default function Home() {
       {/* Projects section - 2 COLUMN GRID LAYOUT */}
       <div ref={projectsRef} className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 w-full">
-          {filteredProjects.map((project, index) => (
-            <Link
-              href={`/portfolio/${project.id}`}
-              key={project.id}
-              className="group block relative overflow-hidden rounded-[48px] h-[600px] w-full"
-            >
-              {/* Image */}
-              <Image
-                src={normalizeImagePath(project.imageUrl)}
-                alt={project.name}
-                width={800}
-                height={600}
-                priority={index < 6} // Prioritize loading the first 6 images
-                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
-                onError={(e) => {
-                  const target = e.target as HTMLImageElement;
-                  target.src = `/placeholder.svg?height=600&width=800&text=${project.name.replace(/\s+/g, "+")}`;
-                }}
-              />
+          {filteredProjects.map((project, index) => {
+            // Create URL-friendly slug from project name
+            const slug = project.name.toLowerCase().replace(/\s+/g, "-")
+            
+            return (
+              <Link
+                href={`/${slug}`}
+                key={project.id}
+                className="group block relative overflow-hidden rounded-[48px] h-[600px] w-full"
+              >
+                {/* Image */}
+                <Image
+                  src={normalizeImagePath(project.imageUrl)}
+                  alt={project.name}
+                  width={800}
+                  height={600}
+                  priority={index < 6} // Prioritize loading the first 6 images
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = `/placeholder.svg?height=600&width=800&text=${project.name.replace(/\s+/g, "+")}`;
+                  }}
+                />
 
-              {/* Overlay content - visible on mobile by default, hover on desktop */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                <div className="transform md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-xs text-white uppercase tracking-wider mb-3 inline-block hover-glitch">
-                    {project.category}
-                  </span>
-                  <div className="text-2xl font-medium mb-3 text-white hover-glitch">
-                    {project.name}
+                {/* Overlay content - visible on mobile by default, hover on desktop */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/70 to-transparent md:opacity-0 opacity-100 md:group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+                  <div className="transform md:translate-y-8 md:group-hover:translate-y-0 transition-transform duration-300">
+                    <span className="text-xs text-white uppercase tracking-wider mb-3 inline-block hover-glitch">
+                      {project.category}
+                    </span>
+                    <div className="text-2xl font-medium mb-3 text-white hover-glitch">
+                      {project.name}
+                    </div>
+                    <p className="text-white mb-4 line-clamp-3 hover-glitch">
+                      {project.tagline}
+                    </p>
+                    <p className="text-white text-sm mb-4 line-clamp-2 hover-glitch">
+                      {project.description}
+                    </p>
+                    <span className="inline-flex items-center text-white border-b border-white pb-1 md:group-hover:pl-2 transition-all duration-300 hover-glitch">
+                      View Project <span className="ml-2 md:group-hover:ml-3 transition-all duration-300">→</span>
+                    </span>
                   </div>
-                  <p className="text-white mb-4 line-clamp-3 hover-glitch">
-                    {project.tagline}
-                  </p>
-                  <p className="text-white text-sm mb-4 line-clamp-2 hover-glitch">
-                    {project.description}
-                  </p>
-                  <span className="inline-flex items-center text-white border-b border-white pb-1 md:group-hover:pl-2 transition-all duration-300 hover-glitch">
-                    View Project <span className="ml-2 md:group-hover:ml-3 transition-all duration-300">→</span>
-                  </span>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            )
+          })}
         </div>
       </div>
 

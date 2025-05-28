@@ -1,28 +1,17 @@
 import Navbar from "@/components/navbar"
 import Logo from "@/components/logo"
 import ProjectCard from "@/components/project-card"
+import { projectsArray } from "@/lib/projects"
 
 export default function Portfolio() {
-  const projects = [
-    {
-      id: 1,
-      title: "Project One",
-      description: "UX/UI Design",
-      imageUrl: "/placeholder.svg?height=600&width=800",
-    },
-    {
-      id: 2,
-      title: "Project Two",
-      description: "Product Design",
-      imageUrl: "/placeholder.svg?height=600&width=800",
-    },
-    {
-      id: 3,
-      title: "Project Three",
-      description: "Brand Identity",
-      imageUrl: "/placeholder.svg?height=600&width=800",
-    },
-  ]
+  // Use the actual project data from lib/projects.ts
+  const projects = projectsArray.map(project => ({
+    id: project.id,
+    title: project.name,
+    name: project.name,
+    description: project.tagline,
+    imageUrl: project.imageUrl,
+  }))
 
   return (
     <main className="min-h-screen">
