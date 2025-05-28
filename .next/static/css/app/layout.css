@@ -813,10 +813,6 @@ body {
   margin-top: 6rem;
   margin-bottom: 6rem;
 }
-.mx-16 {
-  margin-left: 4rem;
-  margin-right: 4rem;
-}
 .-ml-4 {
   margin-left: -1rem;
 }
@@ -1021,12 +1017,6 @@ body {
 }
 .h-svh {
   height: 100svh;
-}
-.h-32 {
-  height: 8rem;
-}
-.h-40 {
-  height: 10rem;
 }
 .max-h-96 {
   max-height: 24rem;
@@ -1357,11 +1347,6 @@ body {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.25rem * var(--tw-space-x-reverse));
   margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-x-12 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(3rem * var(--tw-space-x-reverse));
-  margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
 }
 .space-x-16 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
@@ -1777,18 +1762,6 @@ body {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-.px-24 {
-  padding-left: 6rem;
-  padding-right: 6rem;
-}
-.px-16 {
-  padding-left: 4rem;
-  padding-right: 4rem;
-}
-.px-32 {
-  padding-left: 8rem;
-  padding-right: 8rem;
 }
 .pb-1 {
   padding-bottom: 0.25rem;
@@ -3311,16 +3284,6 @@ body {
     top: auto;
   }
 
-  .sm\:mx-24 {
-    margin-left: 6rem;
-    margin-right: 6rem;
-  }
-
-  .sm\:mx-32 {
-    margin-left: 8rem;
-    margin-right: 8rem;
-  }
-
   .sm\:mx-16 {
     margin-left: 4rem;
     margin-right: 4rem;
@@ -3366,6 +3329,12 @@ body {
     gap: 0.625rem;
   }
 
+  .sm\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-x-reverse: 0;
+    margin-right: calc(3rem * var(--tw-space-x-reverse));
+    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+
   .sm\:space-x-2 > :not([hidden]) ~ :not([hidden]) {
     --tw-space-x-reverse: 0;
     margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -3384,29 +3353,8 @@ body {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .sm\:space-x-12 > :not([hidden]) ~ :not([hidden]) {
-    --tw-space-x-reverse: 0;
-    margin-right: calc(3rem * var(--tw-space-x-reverse));
-    margin-left: calc(3rem * calc(1 - var(--tw-space-x-reverse)));
-  }
-
   .sm\:rounded-lg {
     border-radius: var(--radius);
-  }
-
-  .sm\:px-8 {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  .sm\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-
-  .sm\:py-24 {
-    padding-top: 6rem;
-    padding-bottom: 6rem;
   }
 
   .sm\:px-32 {
@@ -3531,11 +3479,6 @@ body {
   .md\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
-  }
-
-  .md\:px-24 {
-    padding-left: 6rem;
-    padding-right: 6rem;
   }
 
   .md\:pt-\[130\%\] {
