@@ -1,8 +1,5 @@
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "../globals.css"
-
-const inter = Inter({ subsets: ["latin"] })
+import { mtnBrighterSans } from "../fonts"
 
 export const metadata: Metadata = {
   title: "Project Detail",
@@ -15,8 +12,8 @@ export default function ProjectLayout({
   children: React.ReactNode
 }>) {
   return (
-    <div className={inter.className}>
+    <>
       {children}
-    </div>
+    </>
   )
 }
