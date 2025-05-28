@@ -28,9 +28,7 @@ export const projectData: Record<number, Project> = {
     duration: "12 months",
     year: "2024-25",
     processDetails: [
-      "Recently integrated AI to accelerate product design and development.",
-      "Exploring AI-generated UI components and user insights.",
-      "Lean and scalable backend architecture with Supabase + React Native."
+      "CardSpace, a mobile-first platform that digitizes physical loyalty and gift cards. I designed and prototyped core features that let users scan, store, and redeem loyalty cards, eliminating the need to carry plastic cards. For businesses, I built tools to create and manage digital loyalty programs, reducing printing costs and providing real-time insights. Key features I led: Loyalty card scanning and storage Virtual gift card system (“SpaceGifts”) Group contribution feature (“CardSpace Pools”) Business dashboard for tracking customer engagement Eco-friendly and data-driven alternative to physical cards. I applied lean UX, worked across design and development using tools like React Native, Supabase, and AI-assisted design platforms to iterate quickly and reduce build costs."
     ]
   },
   2: {
@@ -54,7 +52,7 @@ export const projectData: Record<number, Project> = {
     tagline: "Track, manage and summarize weekly deliveries and pickups of material (like coal, duff, pease and blend) via containers",
     description:
       "This App is ideal for Coal or bulk mineral operations, Transport & logistics companies and site supervisers needing real-time oversight of stock and container movements.",
-    imageUrl: "/projects/lexmasft/main.jpg",
+    imageUrl: "/projects/lexmasft-coal-app/main.jpg",
     category: "Mobile Applications",
     details: "It is designed for businesses that handle bulk materials like coal.",
     role: "UX Researcher, User Testing & Designer",
@@ -74,7 +72,7 @@ export const projectData: Record<number, Project> = {
     details: "MTN planned to launch a 24/7 internet-based Self Care app for all subscribers (prepaid and postpaid). ",
     role: "Research, User Testing, Prototyping & Product Designer",
     duration: "8 months",
-    year: "2023",
+    year: "2024",
     processDetails: [
       "Users will be able to: Manage accounts, view billing, and request service changes instantly, Track real-time usage for voice, data, and SMS, Access and subscribe to MTN-CI products and services, Change tariff plans and add value-added services anytime & Top up or recharge accounts online with ease"
     ]
@@ -82,19 +80,17 @@ export const projectData: Record<number, Project> = {
   5: {
     id: 5,
     name: "Vodacom RED Rewards",
-    tagline: "Your personal plant care assistant.",
+    tagline: "Vodacom Red Rewards is a premium loyalty and benefits program designed for Vodacom Red customers in South Africa.",
     description:
-      "A plant care companion app that identifies plants through image recognition and provides care schedules.",
-    imageUrl: "/projects/vodacom/main.jpg",
+      "Vodacom RED Rewards offers exclusive perks and experiences such as: Discounts and vouchers on travel, dining, lifestyle, and entertainment. Priority service and dedicated support. Exclusive event access, like concerts or sports games. Travel benefits, including airport lounge access and concierge services",
+    imageUrl: "/projects/vodacom-red-rewards/main.jpg",
     category: "Mobile Applications",
-    details: "Vodacom transforms plant care from guesswork to science with its AI-powered identification technology and personalized care recommendations, helping both novice and experienced plant enthusiasts keep their green friends thriving.",
+    details: "Vodacom Red Rewards offers exclusive travel, lifestyle, digital, and connectivity perks.",
     role: "UI Designer & Brand Identity",
     duration: "3 months",
-    year: "2022",
+    year: "2025",
     processDetails: [
-      "The project began as a personal solution to the common problem of forgetting to water plants or providing incorrect care based on generic advice.",
-      "The plant identification technology required extensive machine learning training on thousands of plant species, with multiple iterations to improve accuracy.",
-      "User testing with both botanical experts and plant novices helped refine the care advice system to strike the right balance between scientific accuracy and practical usefulness."
+      "The new interface simplifies reward discovery, highlights monthly perks, and brings clarity to loyalty tiers and top partner deals. With a cleaner layout, vibrant visuals, and intuitive navigation, the redesign elevates the overall user journey while encouraging reward redemption and increased engagement with Vodacom's partner ecosystem."
     ]
   },
   6: {
