@@ -100,7 +100,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </div>
           
           {/* Cover image */}
-          <div className="relative overflow-hidden rounded-2xl aspect-[16/9] bg-gray-100 mb-12">
+          <div className="relative overflow-hidden rounded-4xl aspect-[16/9] bg-gray-100 mb-12">
             <Image
               src={blog.coverImage}
               alt={blog.title}

@@ -15,57 +15,86 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "The Future of Mobile App Design: Trends to Watch in 2024",
-    slug: "future-mobile-app-design-trends-2024",
-    excerpt: "Exploring the latest trends in mobile app design, from AI-powered interfaces to sustainable design practices that are shaping the future of user experience.",
+    title: "If Everyone Can Prompt, Do We Still Need Designers?",
+    slug: "if-everyone-can-prompt-do-we-still-need-designers",
+    excerpt: "In this prompt-driven world, anyone can generate. But only designers can interpret, refine, and lead.",
     content: `
-      <p>The mobile app design landscape is constantly evolving, and 2024 promises to bring some exciting new trends that will reshape how we interact with our devices. As a designer who's worked on numerous mobile applications, I've observed several key trends emerging that are worth paying attention to.</p>
+      <p>Here’s what no one’s saying out loud: Prompting is not design.</p>
       
-      <h2>AI-Powered Personalization</h2>
-      <p>Artificial intelligence is no longer just a buzzword—it's becoming an integral part of how we design user experiences. Apps are now capable of learning user preferences and adapting their interfaces accordingly. This means more personalized content, smarter navigation patterns, and interfaces that evolve with user behavior.</p>
+      <p>Anyone can open Stitch and generate a screen in seconds. Figma Make will turn a napkin sketch into a full UI. Cursor can write production-ready code from a design prompt.</p>
+      <p>So, does that mean the role of the designer is dead?</p>
+      <p>No — it means it’s evolving. Fast.</p>
+      <p>These tools democratise execution. But they don't replace critical thinking. They don’t know your user. They don’t challenge assumptions. They don't test, iterate, or align with business goals. In this prompt-driven world, anyone can generate.</p>
+      <p>But only designers can interpret, refine, and lead.</p>
+
       
-      <h2>Sustainable Design Practices</h2>
-      <p>With growing awareness of environmental impact, designers are focusing on creating more efficient apps that consume less battery and data. This includes optimizing images, reducing unnecessary animations, and implementing dark mode as a standard feature.</p>
+      <h2>Want to stay valuable? Do this:</h2>
+      <h3>Learn the tools — Stitch, Figam Make, V0, Cursor — but don’t stop there.</h3>
+      <p>Getting started is easy, but mastering them isn’t. Tools like Stitch are built with engineering logic underneath; knowing how developers think gives you a major edge when refining generated outputs.</p>
       
-      <h2>Voice and Gesture Interfaces</h2>
-      <p>As devices become more sophisticated, we're seeing a shift towards more natural interaction methods. Voice commands and gesture controls are becoming more prevalent, requiring designers to think beyond traditional touch interfaces.</p>
-      
-      <p>The key to successful mobile app design in 2024 will be balancing innovation with usability, ensuring that new features enhance rather than complicate the user experience.</p>
+      <h3>Become a curator, not just a creator.</h3>
+      <p>AI can generate 10 screens in 10 seconds — your job is to choose which one works, refine why it works, and craft a cohesive experience from it. Think of Stitch as your intern: it can throw out raw ideas, but you shape the final outcome that fits the brand, the goal, and the user.</p>
+
+      <h3>Focus on the “why” behind every interface.</h3>
+      <p>AI can output a navigation bar — but it won’t understand why users expect one thing in fintech and another in social media. UX isn’t just about structure, it’s about emotion, trust, and behaviour — things AI hasn’t mastered (yet). Your advantage? You know why users bounce, tap, ignore, or convert. Keep asking “why” at every step — then design with that clarity in mind.</p>
+
+      <h3>Connect user behaviour with business outcomes.</h3>
+      <p>Great design isn’t just beautiful or usable — it drives revenue, retention, and growth. The best designers don’t just build for the user; they translate insights into business wins.</p>
+
+      <p>The future of design isn’t about being faster.</p>
+      <p>It’s about being smarter with the speed.</p>
+
+      <p>We don’t need fewer designers.</p>
+      <p>We need ones who can think — and lead — in the age of AI.</p>
     `,
-    author: "Nqobile Dlamini",
-    publishedAt: "2024-01-15",
-    readTime: "5 min read",
+    author: "Nqobile Vundla",
+    publishedAt: "30 May 2025",
+    readTime: "2 min read",
     category: "Design Trends",
-    tags: ["Mobile Design", "UX/UI", "AI", "Sustainability"],
-    coverImage: "/blog/mobile-design-trends.jpg"
+    tags: ["Design Tools", "UX/UI", "AI",],
+    coverImage: "/blog/prompt-driven-design.jpg"
   },
   {
     id: 2,
-    title: "Building Accessible Digital Products: A Designer's Guide",
-    slug: "building-accessible-digital-products-guide",
-    excerpt: "A comprehensive guide to creating inclusive digital experiences that work for everyone, covering practical tips and real-world examples from recent projects.",
+    title: "Why You Should Always Be Ready to Get Laid Off",
+    slug: "why-you-should-always-be-ready-to-get-laid-off",
+    excerpt: "You’re not immune. No one is. That’s why the smartest designers aren’t just designing — they’re future-proofing.",
     content: `
-      <p>Accessibility in digital design isn't just about compliance—it's about creating products that truly serve all users. Throughout my career, I've learned that designing with accessibility in mind from the start leads to better products for everyone.</p>
+      <p>Here’s the brutal truth:</p>
+      <p>Tech isn’t stable. Design jobs? Even less so.</p>
+      <p>In 2023 alone, over 262,000 tech workers were laid off. The trend hasn’t slowed down — 2024 saw more than 150,000 layoffs across hundreds of companies. Even in 2025, roles are being cut daily. Designers, PMs, and engineers who thought they were “safe” were suddenly jobless.</p>
+      <p>You’re not immune. No one is.</p>
+
+      <p>That’s why the smartest designers aren’t just designing — they’re future-proofing.</p>
+      <p>Because waiting for a layoff to start preparing is how you get left behind.</p>
+
+
+      <h2>Want to stay ready? Here’s how:</h2>
+      <h3>Keep your portfolio sharp — always</h3>
+      <p>Don’t wait until your contract ends or your calendar clears. Update your portfolio every time you finish a project — while the strategy, design thinking, and outcomes are still fresh in your head. This way, when an opportunity (or crisis) comes, you’re not scrambling through old files — you’re ready to send.</p>
       
-      <h2>Understanding Your Users</h2>
-      <p>The first step in creating accessible products is understanding the diverse needs of your users. This includes people with visual, auditory, motor, and cognitive disabilities, as well as situational limitations like using a device in bright sunlight or with one hand.</p>
+      <h3>Network before you need to</h3>
+      <p>Networking isn’t just for when you’re job hunting — it’s career insurance. Set a standing reminder to connect, attend a local UX meetup, join a webinar, or just check in with someone in your field once a month.</p>
       
-      <h2>Color and Contrast</h2>
-      <p>One of the most common accessibility issues I encounter is insufficient color contrast. The WCAG guidelines provide clear standards, but I always recommend going beyond the minimum requirements. Tools like Stark and Colour Contrast Analyser can help ensure your designs meet accessibility standards.</p>
+      <h3>Join design communities (Slack, Discord, LinkedIn)</h3>
+      <p>Most of today’s hiring signals start in DMs and group chats — not job boards. The best design communities don’t just offer support — they post leads, freelance gigs, and internal referrals before roles go public.</p>
       
-      <h2>Typography and Readability</h2>
-      <p>Font choice, size, and spacing play crucial roles in accessibility. Sans-serif fonts are generally more readable on screens, and maintaining adequate line spacing improves readability for users with dyslexia.</p>
+      <h3>Share your work, your process, your thinking — build visibility</h3>
+      <p>Don’t just design in silence. Post your work on LinkedIn, write case studies on Behance, tweet your UX insights — show the thinking behind your designs.</p>
       
-      <h2>Interactive Elements</h2>
-      <p>Buttons and interactive elements should be large enough to tap easily (at least 44px on mobile) and provide clear feedback when activated. This benefits not just users with motor disabilities, but anyone using a device while multitasking.</p>
+      <h3>Don’t tie your identity to one company, one tool, or one title</h3>
+      <p>Here’s a hard truth: you are not your job title. That tool you’ve mastered might be irrelevant in 6 months. That company you love might cut your role to save margin.</p>
       
-      <p>Remember, accessibility is an ongoing process, not a one-time checklist. Regular testing with real users, including those with disabilities, is essential for creating truly inclusive products.</p>
+      <p>Companies are solving for their bottom line — not your long-term career. Stay flexible, stay learning, and never let one logo define your value.</p>
+      <p>Being laid off isn’t the end — it’s part of the industry now. But being caught off guard? That’s optional.</p>
+      <p>The designers who thrive aren’t lucky. They’re ready, visible, and always in motion.</p>
+      
     `,
-    author: "Nqobile Dlamini",
-    publishedAt: "2024-01-08",
-    readTime: "7 min read",
-    category: "Accessibility",
-    tags: ["Accessibility", "Inclusive Design", "UX", "WCAG"],
+    author: "Nqobile Vundla",
+    publishedAt: "30 April 2025",
+    readTime: "2 min read",
+    category: "Job Security",
+    tags: ["Employment", "Job Security"],
     coverImage: "/blog/accessibility-guide.jpg"
   },
   {
@@ -96,7 +125,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>The launch isn't the end—it's the beginning of a new phase of learning and optimization based on real user data.</p>
     `,
-    author: "Nqobile Dlamini",
+    author: "Nqobile Vundla",
     publishedAt: "2024-01-01",
     readTime: "8 min read",
     category: "Process",
@@ -128,7 +157,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>Remember, the best color choices are those that serve your users and support your product's goals, not just follow the latest trends.</p>
     `,
-    author: "Nqobile Dlamini",
+    author: "Nqobile Vundla",
     publishedAt: "2023-12-20",
     readTime: "6 min read",
     category: "Design Theory",
@@ -163,7 +192,7 @@ export const blogPosts: BlogPost[] = [
       
       <p>The goal is to create one design system that provides an optimal experience regardless of how users access your product.</p>
     `,
-    author: "Nqobile Dlamini",
+    author: "Nqobile Vundla",
     publishedAt: "2023-12-15",
     readTime: "7 min read",
     category: "Responsive Design",

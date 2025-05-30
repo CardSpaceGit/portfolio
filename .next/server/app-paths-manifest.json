@@ -1,8 +1,7 @@
 {
-  "/playground/page": "app/playground/page.js",
-  "/blog/[slug]/page": "app/blog/[slug]/page.js",
-  "/info/page": "app/info/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
   "/blog/page": "app/blog/page.js",
+  "/blog/[slug]/page": "app/blog/[slug]/page.js",
   "/[projectName]/page": "app/[projectName]/page.js"
 }
