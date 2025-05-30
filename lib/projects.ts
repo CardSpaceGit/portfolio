@@ -95,20 +95,18 @@ export const projectData: Record<number, Project> = {
   },
   6: {
     id: 6,
-    name: "BudgetBuddy",
-    tagline: "Making financial freedom achievable.",
+    name: "Notify.Gov",
+    tagline: "Notify.Gov is a platform that connects citizens with government services.",
     description:
-      "A personal finance app that automatically categorizes expenses and provides visual spending insights.",
-    imageUrl: "/projects/budgetbuddy/main.jpg",
+      "Notify.Gov is a platform that connects citizens with government services through secure identity verification methods, including two-factor authentication, biometric facial recognition, and secure image capture.",
+    imageUrl: "/projects/notify.gov/main.jpg",
     category: "Mobile Applications",
-    details: "BudgetBuddy is a personal finance app designed to help users manage their finances more effectively. It provides a comprehensive overview of income, expenses, and savings, allowing users to track their financial progress and make informed decisions about their money.",
+    details: "It allows users to receive notifications, report municipal issues, and access emergency services.",
     role: "Lead Designer",
     duration: "3 months",
-    year: "2023",
+    year: "2024",
     processDetails: [
-      "The project began with a deep understanding of user needs and pain points in managing finances.",
-      "User testing revealed that a simple and intuitive interface was essential for effective financial management.",
-      "The app was designed with a focus on visual representation of financial data to make it easier for users to understand and manage their finances."
+      "A secure digital storage system enabling users to upload and manage personal documents, link to relatives and dependents, and view information such as credit scores and property details. An AI-powered virtual assistant that interacts with users to assess health, find qualified medical practitioners, book appointments, and monitor daily physical activity."
     ]
   },
   7: {
@@ -126,41 +124,6 @@ export const projectData: Record<number, Project> = {
       "The project began with a deep understanding of user needs and pain points in managing fitness.",
       "User testing revealed that a personalized approach to workout planning was essential for effective fitness management.",
       "The app was designed with a focus on visual representation of fitness progress to make it easier for users to track their progress and achieve their goals."
-    ]
-  },
-  8: {
-    id: 8,
-    name: "NightSky",
-    tagline: "The universe in your hands.",
-    description:
-      "An augmented reality astronomy app that identifies celestial objects when pointing your phone at the sky.",
-    imageUrl: "/projects/nightsky/main.jpg",
-    category: "Mobile Applications",
-    details: "NightSky is an augmented reality astronomy app designed to help users explore the night sky and learn about celestial objects. It uses image recognition technology to identify stars, planets, and constellations when pointing your phone at the sky.",
-    role: "UX Designer",
-    duration: "3 months",
-    year: "2023",
-    processDetails: [
-      "The project began with a deep understanding of user needs and pain points in learning about astronomy.",
-      "User testing revealed that a visually engaging and interactive approach was essential for effective learning about astronomy.",
-      "The app was designed with a focus on visual representation of celestial objects to make it easier for users to learn about astronomy."
-    ]
-  },
-  9: {
-    id: 9,
-    name: "LinguaLeap",
-    tagline: "Language learning that fits your life.",
-    description: "An adaptive language learning app that uses AI to create personalized lesson plans.",
-    imageUrl: "/projects/lingualeap/main.jpg",
-    category: "Mobile Applications",
-    details: "LinguaLeap is an adaptive language learning app designed to help users learn new languages more effectively. It uses AI to create personalized lesson plans based on user progress and learning style.",
-    role: "Lead Designer",
-    duration: "5 months",
-    year: "2023",
-    processDetails: [
-      "The project began with a deep understanding of user needs and pain points in learning languages.",
-      "User testing revealed that a personalized approach to language learning was essential for effective learning.",
-      "The app was designed with a focus on visual representation of language learning progress to make it easier for users to track their progress and achieve their language learning goals."
     ]
   },
 

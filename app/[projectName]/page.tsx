@@ -306,107 +306,152 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               <p key={index}>{detail}</p>
             ))}
           </div>
-          {/* Project Images Grid - Updated asymmetrical layout without containers */}
-          <div className="mt-16 grid grid-cols-12 gap-4">
-            {/* Top row */}
-            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[64%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.main || "/placeholder.svg"}
-                  alt={`${project.name} main view`}
-                  width={800}
-                  height={500}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=500&width=800&text=${project.name.replace(/\s+/g, "+")}+Main`;
-                  }}
-                />
+          {/* Project Images - Conditional layout based on category */}
+          {currentProject.category === "Desktop Applications" ? (
+            /* Desktop Applications: Full-width images with height 2x width (1:2 aspect ratio) */
+            <div className="mt-16 space-y-8">
+              {/* Main image */}
+              <div className="w-full overflow-hidden rounded-6xl border border-slate-200">
+                <div className="relative w-full pt-[200%] rounded-6xl overflow-hidden">
+                  <Image
+                    src={project.images.main || "/placeholder.svg"}
+                    alt={`${project.name} main view`}
+                    width={800}
+                    height={1600}
+                    className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.src = `/placeholder.svg?height=1600&width=800&text=${project.name.replace(/\s+/g, "+")}+Main`;
+                    }}
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[130%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.secondary[0] || "/placeholder.svg"}
-                  alt={`${project.name} detail view`}
-                  width={400}
-                  height={500}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=500&width=400&text=${project.name.replace(/\s+/g, "+")}+Feature`;
-                  }}
-                />
-              </div>
-            </div>
 
-            {/* Bottom row */}
-            <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[138%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.secondary[1] || "/placeholder.svg"}
-                  alt={`${project.name} detail view`}
-                  width={400}
-                  height={500}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=500&width=400&text=${project.name.replace(/\s+/g, "+")}+Search`;
-                  }}
-                />
-              </div>
+              {/* Secondary images - all full width with height 2x width */}
+              {project.images.secondary.map((imageSrc, index) => (
+                <div key={index} className="w-full overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative w-full pt-[200%] rounded-6xl overflow-hidden">
+                    <Image
+                      src={imageSrc || "/placeholder.svg"}
+                      alt={`${project.name} view ${index + 1}`}
+                      width={800}
+                      height={1600}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=1600&width=800&text=${project.name.replace(/\s+/g, "+")}+View+${index + 1}`;
+                      }}
+                    />
+                  </div>
+                </div>
+              ))}
             </div>
-            <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[68%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.secondary[2] || "/placeholder.svg"}
-                  alt={`${project.name} overview`}
-                  width={800}
-                  height={300}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=300&width=800&text=${project.name.replace(/\s+/g, "+")}+Settings`;
-                  }}
-                />
-              </div>
-            </div>
-          </div>
+          ) : (
+            /* Mobile Applications & Branding: Existing grid layout */
+            <>
+              {/* Project Images Grid - Updated asymmetrical layout without containers */}
+              <div className="mt-16 grid grid-cols-12 gap-4">
+                {/* Top row */}
+                <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[64%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.main || "/placeholder.svg"}
+                      alt={`${project.name} main view`}
+                      width={800}
+                      height={500}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=500&width=800&text=${project.name.replace(/\s+/g, "+")}+Main`;
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[130%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.secondary[0] || "/placeholder.svg"}
+                      alt={`${project.name} detail view`}
+                      width={400}
+                      height={500}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=500&width=400&text=${project.name.replace(/\s+/g, "+")}+Feature`;
+                      }}
+                    />
+                  </div>
+                </div>
 
-          {/* Additional Project Images - Second asymmetrical grid */}
-          <div className="mt-8 grid grid-cols-12 gap-4">
-            {/* Additional images */}
-            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.secondary[3] || "/placeholder.svg"}
-                  alt={`${project.name} additional view`}
-                  width={600}
-                  height={400}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=400&width=600&text=${project.name.replace(/\s+/g, "+")}+Profile`;
-                  }}
-                />
+                {/* Bottom row */}
+                <div className="col-span-12 md:col-span-4 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[138%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.secondary[1] || "/placeholder.svg"}
+                      alt={`${project.name} detail view`}
+                      width={400}
+                      height={500}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=500&width=400&text=${project.name.replace(/\s+/g, "+")}+Search`;
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="col-span-12 md:col-span-8 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[68%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.secondary[2] || "/placeholder.svg"}
+                      alt={`${project.name} overview`}
+                      width={800}
+                      height={300}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=300&width=800&text=${project.name.replace(/\s+/g, "+")}+Settings`;
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-            <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
-              <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
-                <Image
-                  src={project.images.secondary[4] || "/placeholder.svg"}
-                  alt={`${project.name} additional view`}
-                  width={600}
-                  height={400}
-                  className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
-                  onError={(e) => {
-                    const target = e.target as HTMLImageElement;
-                    target.src = `/placeholder.svg?height=400&width=600&text=${project.name.replace(/\s+/g, "+")}+Overview`;
-                  }}
-                />
+
+              {/* Additional Project Images - Second asymmetrical grid */}
+              <div className="mt-8 grid grid-cols-12 gap-4">
+                {/* Additional images */}
+                <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.secondary[3] || "/placeholder.svg"}
+                      alt={`${project.name} additional view`}
+                      width={600}
+                      height={400}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=400&width=600&text=${project.name.replace(/\s+/g, "+")}+Profile`;
+                      }}
+                    />
+                  </div>
+                </div>
+                <div className="col-span-12 md:col-span-6 overflow-hidden rounded-6xl border border-slate-200">
+                  <div className="relative h-[445px] md:h-auto md:pt-[66.7%] rounded-6xl overflow-hidden w-full">
+                    <Image
+                      src={project.images.secondary[4] || "/placeholder.svg"}
+                      alt={`${project.name} additional view`}
+                      width={600}
+                      height={400}
+                      className="absolute top-0 left-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110 rounded-6xl"
+                      onError={(e) => {
+                        const target = e.target as HTMLImageElement;
+                        target.src = `/placeholder.svg?height=400&width=600&text=${project.name.replace(/\s+/g, "+")}+Overview`;
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
+            </>
+          )}
           {/* Project showcase section with Like button */}
           <div className="mt-24 py-16 bg-white text-black text-center">
             <LikeButton projectId={project.id} />

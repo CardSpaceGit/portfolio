@@ -50,6 +50,7 @@ export default function Navbar({ variant = "default" }: { variant?: "default" | 
   
   const navItems = [
     { name: "PORTFOLIO", path: "/" },
+    { name: "BLOG", path: "/blog" },
     { name: "PLAYGROUND", path: "/playground" },
     { name: "MORE ABOUT ME", path: "/info" },
   ]

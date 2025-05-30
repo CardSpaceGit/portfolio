@@ -198,42 +198,42 @@ body {
   0%,
   100% {
     top: -3px;
-    left: -2px;
+    left: -1px;
     opacity: 0.8;
   }
-  33% {
-    top: 3px;
-    left: -5px;
+  30% {
+    top: 1px;
+    left: -6px;
     opacity: 0.6;
   }
-  66% {
-    top: 1px;
-    left: 5px;
+  60% {
+    top: 3px;
+    left: 1px;
     opacity: 0.4;
+  }
+  90% {
+    top: -1px;
+    left: 6px;
+    opacity: 0.7;
   }
 }
 
 @keyframes glitch-animate-4 {
   0%,
   100% {
-    top: -4px;
+    top: -2px;
     left: 1px;
-    opacity: 0.9;
-  }
-  25% {
-    top: 3px;
-    left: -3px;
     opacity: 0.7;
   }
-  50% {
-    top: -1px;
-    left: 4px;
-    opacity: 0.5;
+  35% {
+    top: 1px;
+    left: -4px;
+    opacity: 0.9;
   }
-  75% {
+  70% {
     top: 2px;
-    left: -2px;
-    opacity: 0.3;
+    left: 1px;
+    opacity: 0.2;
   }
 }
 
@@ -267,7 +267,7 @@ body {
   white-space: nowrap;
 }
 
-/* Hover Glitch Effect */
+/* Hover glitch effect */
 .hover-glitch {
   position: relative;
   transition: all 0.2s ease;
@@ -319,4 +319,103 @@ body {
                 -0.025em -0.025em 0 rgba(0, 255, 0, 0.75),
                 -0.025em -0.05em 0 rgba(0, 0, 255, 0.75);
   }
+}
+
+/* Rounded corners utility */
+.rounded-6xl {
+  border-radius: 3rem;
+}
+
+/* Blog prose styling */
+.prose {
+  font-family: var(--font-mtn-brighter-sans), sans-serif;
+}
+
+.prose h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  line-height: 1.3;
+}
+
+.prose h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #1e293b;
+  line-height: 1.4;
+}
+
+.prose p {
+  margin-bottom: 1.5rem;
+  color: #475569;
+  line-height: 1.8;
+  font-size: 1.125rem;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose strong {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.prose em {
+  font-style: italic;
+}
+
+.prose ul {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.prose li {
+  margin-bottom: 0.5rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.prose blockquote {
+  border-left: 4px solid #3b82f6;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  font-style: italic;
+  color: #64748b;
+}
+
+.prose code {
+  background-color: #f1f5f9;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  color: #1e293b;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+.prose pre {
+  background-color: #1e293b;
+  color: #e2e8f0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+.prose pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
