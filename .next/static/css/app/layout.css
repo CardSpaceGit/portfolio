@@ -1491,6 +1491,9 @@ body {
 .rounded-xl {
   border-radius: 0.75rem;
 }
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
 .rounded-t-\[10px\] {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -2060,6 +2063,10 @@ body {
 }
 .text-white\/80 {
   color: rgb(255 255 255 / 0.8);
+}
+.text-rose-600 {
+  --tw-text-opacity: 1;
+  color: rgb(225 29 72 / var(--tw-text-opacity, 1));
 }
 .underline {
   text-decoration-line: underline;

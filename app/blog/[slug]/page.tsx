@@ -135,7 +135,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
                     href={`/blog/${relatedBlog.slug}`}
                     className="group block"
                   >
-                    <div className="relative overflow-hidden rounded-xl aspect-[4/3] bg-gray-100 mb-4">
+                    <div className="relative overflow-hidden rounded-3xl aspect-[4/3] bg-gray-100 mb-4">
                       <Image
                         src={relatedBlog.coverImage}
                         alt={relatedBlog.title}

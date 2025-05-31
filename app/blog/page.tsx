@@ -19,7 +19,7 @@ export default function BlogPage() {
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-medium mb-4 text-blue-950">Blog</h1>
           <p className="text-xl text-blue-950 mb-16 max-w-2xl">
-            Thoughts on design, technology, and the creative process. Sharing insights from my journey as a product designer.
+            My thoughts on design, technology, and the creative process. Sharing insights from my journey as a Product Designer.
           </p>
           
           <div className="space-y-16">

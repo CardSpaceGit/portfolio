@@ -1,1 +1,1 @@
-self.__REACT_LOADABLE_MANIFEST="{\"app/[projectName]/page.tsx -> react-confetti\":{\"id\":\"app/[projectName]/page.tsx -> react-confetti\",\"files\":[\"static/chunks/_app-pages-browser_node_modules_react-confetti_dist_react-confetti_mjs.js\"]}}"
+self.__REACT_LOADABLE_MANIFEST="{}"

@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import dynamic from "next/dynamic"
 import { useRouter, useParams } from "next/navigation"
 import Navbar from "@/components/navbar"
 import Logo from "@/components/logo"
@@ -13,95 +12,6 @@ interface ProjectPageProps {
   params: {
     projectName: string
   }
-}
-
-// Dynamically import react-confetti to avoid SSR issues
-const ReactConfetti = dynamic(() => import("react-confetti"), { ssr: false })
-
-function LikeButton({ projectId }: { projectId: number }) {
-  const [liked, setLiked] = useState(false)
-  const [likeCount, setLikeCount] = useState(0)
-  const [showConfetti, setShowConfetti] = useState(false)
-  const [windowSize, setWindowSize] = useState({ width: 0, height: 0 })
-
-  // Set up window size for confetti
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowSize({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      })
-    }
-
-    // Initial size
-    handleResize()
-
-    // Update on resize
-    window.addEventListener("resize", handleResize)
-    return () => window.removeEventListener("resize", handleResize)
-  }, [])
-
-  // Check if user has already liked this project
-  useEffect(() => {
-    const likedProjects = JSON.parse(localStorage.getItem("likedProjects") || "{}")
-    if (likedProjects[projectId]) {
-      setLiked(true)
-    }
-
-    // Get like count from localStorage (in a real app, this would come from a database)
-    const projectLikes = JSON.parse(localStorage.getItem(`project_${projectId}_likes`) || "0")
-    setLikeCount(projectLikes)
-  }, [projectId])
-
-  const handleLike = () => {
-    if (liked) return // User already liked this project
-
-    // Update liked state
-    setLiked(true)
-
-    // Save to localStorage
-    const likedProjects = JSON.parse(localStorage.getItem("likedProjects") || "{}")
-    likedProjects[projectId] = true
-    localStorage.setItem("likedProjects", JSON.stringify(likedProjects))
-
-    // Update like count
-    const newCount = likeCount + 1
-    setLikeCount(newCount)
-    localStorage.setItem(`project_${projectId}_likes`, JSON.stringify(newCount))
-
-    // Show confetti
-    setShowConfetti(true)
-    setTimeout(() => setShowConfetti(false), 5000) // Hide confetti after 5 seconds
-  }
-
-  return (
-    <>
-      {showConfetti && (
-        <ReactConfetti width={windowSize.width} height={windowSize.height} recycle={false} numberOfPieces={500} />
-      )}
-      <div className="relative inline-block">
-        <button
-          onClick={handleLike}
-          disabled={liked}
-          className={`mx-auto w-16 h-16 ${
-            liked ? "bg-blue-700" : "bg-blue-600 hover:bg-blue-700"
-          } rounded-full flex items-center justify-center mb-2 transition-all duration-300 ${
-            liked ? "scale-110" : "transform hover:scale-105"
-          }`}
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" className="w-8 h-8">
-            <path d="M7.493 18.75c-.425 0-.82-.236-.975-.632A7.48 7.48 0 016 15.375c0-1.75.599-3.358 1.602-4.634.151-.192.373-.309.6-.397.473-.183.89-.514 1.212-.924a9.042 9.042 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75 2.25 2.25 0 012.25 2.25c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H14.23c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23h-.777zM2.331 10.977a11.969 11.969 0 00-.831 4.398 12 12 0 00.52 3.507c.26.85 1.084 1.368 1.973 1.368H4.9c.445 0 .72-.498.523-.898a8.963 8.963 0 01-.924-3.977c0-1.708.476-3.305 1.302-4.666.245-.403-.028-.959-.5-.959H4.25c-.832 0-1.612.453-1.918 1.227z" />
-          </svg>
-        </button>
-        {likeCount > 0 && (
-          <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-            {likeCount}
-          </div>
-        )}
-      </div>
-      <h2 className="text-center text-2xl font-medium mb-2">{liked ? "Liked!" : "Like"}</h2>
-    </>
-  )
 }
 
 // Helper function to get project by name slug
@@ -498,9 +408,8 @@ export default function ProjectPage({ params }: ProjectPageProps) {
               </div>
             </>
           )}
-          {/* Project showcase section with Like button */}
+          {/* Project showcase section - simplified without like button */}
           <div className="mt-24 py-16 bg-white text-black text-center">
-            <LikeButton projectId={project.id} />
             <div className="text-3xl font-bold mb-2">{project.name}</div>
             <p className="text-md max-w-2xl mx-auto">{project.description}</p>
           </div>
