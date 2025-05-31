@@ -28,7 +28,9 @@ export const projectData: Record<number, Project> = {
     duration: "12 months",
     year: "2024-25",
     processDetails: [
-      "CardSpace, a mobile-first platform that digitizes physical loyalty and gift cards. I designed and prototyped core features that let users scan, store, and redeem loyalty cards, eliminating the need to carry plastic cards. For businesses, I built tools to create and manage digital loyalty programs, reducing printing costs and providing real-time insights. Key features I led: Loyalty card scanning and storage Virtual gift card system (“SpaceGifts”) Group contribution feature (“CardSpace Pools”) Business dashboard for tracking customer engagement Eco-friendly and data-driven alternative to physical cards. I applied lean UX, worked across design and development using tools like React Native, Supabase, and AI-assisted design platforms to iterate quickly and reduce build costs."
+      "CardSpace, a mobile-first platform that digitizes physical loyalty and gift cards. I designed and prototyped core features that let users scan, store, and redeem loyalty cards, eliminating the need to carry plastic cards. For businesses, I built tools to create and manage digital loyalty programs, reducing printing costs and providing real-time insights.",
+      "Key features I led: Loyalty card scanning and storage, Virtual gift card system (SpaceGifts), Group contribution feature (CardSpace Pools), Business dashboard for tracking customer engagement, Eco-friendly and data-driven alternative to physical cards.",
+      "I applied lean UX, worked across design and development using tools like React Native, Supabase, and AI-assisted design platforms to iterate quickly and reduce build costs."
     ]
   },
   2: {
@@ -112,18 +114,26 @@ export const projectData: Record<number, Project> = {
   7: {
     id: 7,
     name: "CitizenC",
-    tagline: "Personalized fitness, perfectly synchronized.",
-    description: "A fitness tracking app that adapts workouts based on user progress and available equipment.",
+    tagline: "Your Daily Companion for Learning, Growth, and Wellbeing",
+    description: "CitizenC is more than just a virtual school—it's a smart, supportive learning guide designed to meet students where they are.",
     imageUrl: "/projects/CitizenC/main.jpg",
     category: "Mobile Applications",
-    details: "CitizenC is a fitness tracking app designed to help users achieve their fitness goals by providing personalized workout plans based on their progress and available equipment.",
+    details: "CitizenC helps students stay engaged, confident, and organized. From personalized learning paths and career-focused goal setting to daily challenges, reminders, and mental health check-ins.",
     role: "Lead Designer",
     duration: "4 months",
-    year: "2023",
+    year: "2024",
     processDetails: [
-      "The project began with a deep understanding of user needs and pain points in managing fitness.",
-      "User testing revealed that a personalized approach to workout planning was essential for effective fitness management.",
-      "The app was designed with a focus on visual representation of fitness progress to make it easier for users to track their progress and achieve their goals."
+      "Whether you're dreaming of becoming a game developer, a doctor, or an entrepreneur, CitizenC adapts to your strengths, helps you tackle your weak spots, and celebrates every win—big or small.",
+      "Key Features:",
+      "• Personalized learning guided by 'Edu,' your smart companion",
+      "• Career goal setting based on student aspirations",
+      "• Gamified challenges and a rewards passport system",
+      "• Homework planner, reminders, and progress tracker",
+      "• Emoji mood check-ins and daily tips/jokes to keep it light",
+      "• Literacy boosters like 'Word of the Day' and 'Book of the Week'",
+      "• Built-in access to psycho-social support and wellness resources",
+      "• Collaborative study groups and discussion forums",
+      "• Strong parental controls and data privacy for peace of mind"
     ]
   },
 
