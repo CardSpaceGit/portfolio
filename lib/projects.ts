@@ -28,8 +28,8 @@ export const projectData: Record<number, Project> = {
     duration: "12 months",
     year: "2024-25",
     processDetails: [
-      "CardSpace, a mobile-first platform that digitizes physical loyalty and gift cards. I designed and prototyped core features that let users scan, store, and redeem loyalty cards, eliminating the need to carry plastic cards. For businesses, I built tools to create and manage digital loyalty programs, reducing printing costs and providing real-time insights.",
-      "Key features I led: Loyalty card scanning and storage, Virtual gift card system (SpaceGifts), Group contribution feature (CardSpace Pools), Business dashboard for tracking customer engagement, Eco-friendly and data-driven alternative to physical cards.",
+      "As, a mobile-first platform that digitizes physical loyalty and gift cards, CardSpace users scan, store, and redeem loyalty cards, eliminating the need to carry plastic cards. Businesses can create and manage digital loyalty programs, reducing printing costs and providing real-time insights.",
+      "We also expored loyalty card scanning and storage, Virtual gift card system (SpaceGifts), Group contribution feature (CardSpace Pools), Business dashboard for tracking customer engagement, Eco-friendly and data-driven alternative to physical cards.",
       "I applied lean UX, worked across design and development using tools like React Native, Supabase, and AI-assisted design platforms to iterate quickly and reduce build costs."
     ]
   },
@@ -40,7 +40,7 @@ export const projectData: Record<number, Project> = {
     description: "MyPerks provides Kicks which are points organizations can use as incentives to unlock brand loyalty from their customers and employees.",
     imageUrl: "/projects/myperks/main.jpg",
     category: "Mobile Applications",
-    details: "MyPerks provides a wide variety of rewards, guaranteeing that every employee can find something that truly resonates with their preferences.",
+    details: "MyPerks also provides a wide variety of rewards, guaranteeing that every employee can find something that truly resonates with their preferences.",
     role: "UX/UI Designer, AI/ML Engineer",
     duration: "4 - 6 months",
     year: "2024",
@@ -52,8 +52,7 @@ export const projectData: Record<number, Project> = {
     id: 3,
     name: "LexMasFT Coal App",
     tagline: "Track, manage and summarize weekly deliveries and pickups of material (like coal, duff, pease and blend) via containers",
-    description:
-      "This App is ideal for Coal or bulk mineral operations, Transport & logistics companies and site supervisers needing real-time oversight of stock and container movements.",
+    description: "This App is ideal for Coal or bulk mineral operations, Transport & logistics companies and site supervisers needing real-time oversight of stock and container movements.",
     imageUrl: "/projects/lexmasft-coal-app/main.jpg",
     category: "Mobile Applications",
     details: "It is designed for businesses that handle bulk materials like coal.",
@@ -68,7 +67,7 @@ export const projectData: Record<number, Project> = {
     id: 4,
     name: "MTN SelfCare App",
     tagline: "Empowring users with 24/7 access to manage their account Anytime, Anywhere",
-    description: "Self Care app is a mobile application that enables users or customers to perform high-value transactions, from simple account updates to paying bills, viewing and managing customer data and services, managing support tickets, and more.",
+    description: "Self Care app is a mobile application that enables MTN customers to perform high-value transactions, from simple account updates to paying bills, viewing and managing customer data and services, managing support tickets, and more.",
     imageUrl: "/projects/mtn-selfcare-app/main.jpg",
     category: "Mobile Applications",
     details: "MTN planned to launch a 24/7 internet-based Self Care app for all subscribers (prepaid and postpaid). ",
@@ -76,7 +75,7 @@ export const projectData: Record<number, Project> = {
     duration: "8 months",
     year: "2024",
     processDetails: [
-      "Users will be able to: Manage accounts, view billing, and request service changes instantly, Track real-time usage for voice, data, and SMS, Access and subscribe to MTN-CI products and services, Change tariff plans and add value-added services anytime & Top up or recharge accounts online with ease"
+      "MTN users will be able to: Manage accounts, view billing, and request service changes instantly, Track real-time usage for voice, data, and SMS, Access and subscribe to MTN-CI products and services, Change tariff plans and add value-added services anytime & Top up or recharge accounts online with ease"
     ]
   },
   5: {
@@ -84,10 +83,10 @@ export const projectData: Record<number, Project> = {
     name: "Vodacom RED Rewards",
     tagline: "Vodacom Red Rewards is a premium loyalty and benefits program designed for Vodacom Red customers in South Africa.",
     description:
-      "Vodacom RED Rewards offers exclusive perks and experiences such as: Discounts and vouchers on travel, dining, lifestyle, and entertainment. Priority service and dedicated support. Exclusive event access, like concerts or sports games. Travel benefits, including airport lounge access and concierge services",
+      "Vodacom RED Rewards offers exclusive perks and experiences such as: Discounts and vouchers on travel, dining, lifestyle, entertainment, exclusive event access, like concerts or sports games. Vodacom RED also offers travel benefits, including airport lounge access and concierge services.",
     imageUrl: "/projects/vodacom-red-rewards/main.jpg",
     category: "Mobile Applications",
-    details: "Vodacom Red Rewards offers exclusive travel, lifestyle, digital, and connectivity perks.",
+    details: "Vodacom Red Rewards also offers exclusive travel, lifestyle, digital, and connectivity perks.",
     role: "UI Designer & Brand Identity",
     duration: "3 months",
     year: "2025",
