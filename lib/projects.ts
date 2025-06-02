@@ -112,10 +112,10 @@ export const projectData: Record<number, Project> = {
   },
   7: {
     id: 7,
-    name: "CitizenC",
+    name: "Citizen C",
     tagline: "Your Daily Companion for Learning, Growth, and Wellbeing",
     description: "CitizenC is more than just a virtual school—it's a smart, supportive learning guide designed to meet students where they are.",
-    imageUrl: "/projects/citizenc/main.jpg",
+    imageUrl: "/projects/citizen-c/main.jpg",
     category: "Mobile Applications",
     details: "CitizenC helps students stay engaged, confident, and organized. From personalized learning paths and career-focused goal setting to daily challenges, reminders, and mental health check-ins.",
     role: "Lead Designer",
