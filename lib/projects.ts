@@ -139,20 +139,26 @@ export const projectData: Record<number, Project> = {
   // Desktop Applications (4)
   10: {
     id: 10,
-    name: "eTender",
+    name: "eTender Platform",
     tagline: "Creative workflow management for design teams.",
     description:
-      "A comprehensive project management platform for creative teams that streamlines asset management.",
-    imageUrl: "/projects/etender/main.jpg",
+      "The eTender platform is a locally developed digital procurement system designed to streamline and automate the tendering process for both public and private sectors in South Africa.",
+    imageUrl: "/projects/etender-platform/main.jpg",
     category: "Desktop Applications",
-    details: "eTender is a comprehensive project management platform designed to help creative teams manage their assets more effectively. It provides a centralized location for storing and managing assets, allowing teams to collaborate more efficiently.",
+    details: "Its primary audience is the public sector — including government departments, municipalities, and SOEs — while the secondary audience is private companies with procurement needs.",
     role: "Lead Designer",
     duration: "4 months",
     year: "2023",
     processDetails: [
-      "The project began with a deep understanding of user needs and pain points in managing creative projects.",
-      "User testing revealed that a visually engaging and interactive approach was essential for effective project management.",
-      "The app was designed with a focus on visual representation of project progress to make it easier for users to track their progress and achieve their project goals."
+      "The system addresses critical challenges faced by the public sector such as:",
+      "• Non-compliance with procurement regulations",
+      "• Manual, error-prone processes",
+      "• Loss or mismanagement of physical documents",
+      "• Inability to link procurement plans to actual spending",
+      "• Over-invoicing and poor audit trails",
+      "For the private sector, it solves the issue of reliance on costly and inflexible international systems not tailored to local needs.",
+      "What makes this platform stand out is its deep local understanding — created by a procurement auditor with firsthand experience — and its affordability versus international solutions like SAP. The team is still defining the visual identity and tone but leans toward a friendly, casual communication style and seeks input on branding and UX inspiration.",
+      "The goal is to build a clear, user-friendly system that not only reduces fraud and inefficiencies but also instills confidence and compliance across South African procurement ecosystems."
     ]
   },
   11: {
