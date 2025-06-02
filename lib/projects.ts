@@ -19,7 +19,7 @@ export const projectData: Record<number, Project> = {
   1: {
     id: 1,
     name: "CardSpace",
-    tagline: "Your all-in-one loyalty app.",
+    tagline: "Your all-in-one loyalty app, for all your loyalty needs.",
     description: "CardSpace is a digital wallet platform for loyalty cards, gift cards, and rewards experiences, designed to replace the clutter of physical cards with a seamless, eco-friendly, and data-driven solution.",
     imageUrl: "/projects/cardspace/main.jpg",
     category: "Mobile Applications",
