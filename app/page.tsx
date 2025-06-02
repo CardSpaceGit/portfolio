@@ -312,7 +312,7 @@ export default function Home() {
             <div className="w-full border-t border-gray-800 pt-8">
               <div className="container mx-auto flex justify-center space-x-16 md:space-x-24">
                 <a
-                  href="https://facebook.com"
+                  href="https://dribbble.com/mrnqoe"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"
@@ -343,7 +343,7 @@ export default function Home() {
                   Let's Chat
                 </a>
                 <a
-                  href="https://linkedin.com"
+                  href="https://www.linkedin.com/in/mrq/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="relative pb-1 uppercase tracking-wider text-xs md:text-xs hover:opacity-80 transition-opacity after:absolute after:bottom-0 after:left-0 after:w-full after:h-[1px] after:bg-white hover-glitch"

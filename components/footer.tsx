@@ -79,7 +79,7 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-gray-800 pt-8">
           <div className="flex space-x-8 mb-4 md:mb-0">
             <a
-              href="https://dribbble.com"
+              href="https://dribbble.com/mrnqoe"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 text-xs hover:text-white transition-colors hover-glitch"
@@ -87,7 +87,7 @@ export default function Footer() {
               Dribbble
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/mrq/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 text-xs hover:text-white transition-colors hover-glitch"
