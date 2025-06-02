@@ -139,13 +139,13 @@ export const projectData: Record<number, Project> = {
   // Desktop Applications (4)
   10: {
     id: 10,
-    name: "StudioFlow",
+    name: "eTender",
     tagline: "Creative workflow management for design teams.",
     description:
       "A comprehensive project management platform for creative teams that streamlines asset management.",
     imageUrl: "/projects/studioflow/main.jpg",
     category: "Desktop Applications",
-    details: "StudioFlow is a comprehensive project management platform designed to help creative teams manage their assets more effectively. It provides a centralized location for storing and managing assets, allowing teams to collaborate more efficiently.",
+    details: "eTender is a comprehensive project management platform designed to help creative teams manage their assets more effectively. It provides a centralized location for storing and managing assets, allowing teams to collaborate more efficiently.",
     role: "Lead Designer",
     duration: "4 months",
     year: "2023",
