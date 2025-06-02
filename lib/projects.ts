@@ -115,7 +115,7 @@ export const projectData: Record<number, Project> = {
     name: "CitizenC",
     tagline: "Your Daily Companion for Learning, Growth, and Wellbeing",
     description: "CitizenC is more than just a virtual school—it's a smart, supportive learning guide designed to meet students where they are.",
-    imageUrl: "/projects/CitizenC/main.jpg",
+    imageUrl: "/projects/citizenc/main.jpg",
     category: "Mobile Applications",
     details: "CitizenC helps students stay engaged, confident, and organized. From personalized learning paths and career-focused goal setting to daily challenges, reminders, and mental health check-ins.",
     role: "Lead Designer",
@@ -143,7 +143,7 @@ export const projectData: Record<number, Project> = {
     tagline: "Creative workflow management for design teams.",
     description:
       "A comprehensive project management platform for creative teams that streamlines asset management.",
-    imageUrl: "/projects/studioflow/main.jpg",
+    imageUrl: "/projects/etender/main.jpg",
     category: "Desktop Applications",
     details: "eTender is a comprehensive project management platform designed to help creative teams manage their assets more effectively. It provides a centralized location for storing and managing assets, allowing teams to collaborate more efficiently.",
     role: "Lead Designer",
